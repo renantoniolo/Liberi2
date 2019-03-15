@@ -1,0 +1,501 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Lux.Views.LivroDetailsPage"
+    xmlns:local="clr-namespace:Lux.Helpers"
+    xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+    xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+    xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+    xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+    Padding="10,10,10,0"
+    BackgroundImage="bg_livroDetalhes">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImagemConverter x:Key="imagemSource"></local:ImagemConverter>
+            <local:PercentConverter x:Key="percent"></local:PercentConverter>
+            <local:BoolConverter x:Key="boolInvert"></local:BoolConverter>
+            <local:DoubleToRattings x:Key="doubleTorattings"></local:DoubleToRattings>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid 
+        ColumnSpacing="0"
+        RowSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="50" />
+            <RowDefinition Height="20" />
+            <RowDefinition Height="15" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid 
+            Grid.Row="0"
+            ColumnSpacing="0"
+            RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <ffimageloading:CachedImage 
+                Grid.Column="0" 
+                Grid.Row="0" 
+                HorizontalOptions="FillAndExpand"
+                Source="{Binding Item.Capa, Converter={StaticResource imagemSource}"
+                DownsampleToViewSize="true"
+                CacheType="Memory"
+                FadeAnimationEnabled="true"
+                LoadingPlaceholder="bookLoading"
+                ErrorPlaceholder="bookUnavailable" 
+                Margin="0">
+               <ffimageloading:CachedImage.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding ImageCapaCommand}" />
+               </ffimageloading:CachedImage.GestureRecognizers>
+            </ffimageloading:CachedImage>
+
+            <Grid 
+                Grid.Row="0"
+                Grid.Column="1"
+                ColumnSpacing="0"
+                RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+                
+                <!--Amostra-->
+                <StackLayout 
+                    IsVisible="{Binding IsBaixar, Mode=TwoWay}"
+                    Grid.Row="0" 
+                    Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding AmostraBookCommand}" />
+                    </StackLayout.GestureRecognizers>
+                    
+                    <mi:IconLabel 
+                        FontSize="26"
+                        Icon="ic_arrow_forward" 
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        TextColor="{StaticResource GreyLiberi}" >
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding AmostraBookCommand}" />
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+                        
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Margin="5,0,0,0"
+                        Text="Amostra"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        FontSize="Small"
+                        TextColor="{StaticResource GreyLiberi}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding AmostraBookCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+
+                <!--DownloadFull-->
+                <StackLayout 
+                    IsVisible="{Binding IsBaixar, Mode=TwoWay}"
+                    Grid.Row="1" 
+                    Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DownloadBookCommand}" />
+                    </StackLayout.GestureRecognizers>
+                    
+                    <mi:IconLabel 
+                        FontSize="26"
+                        Icon="ic_file_download" 
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        TextColor="{StaticResource GreyLiberi}" >
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DownloadBookCommand}" />
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Margin="0"
+                        Text="Download"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        FontSize="Small"
+                        TextColor="{StaticResource GreyLiberi}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DownloadBookCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    
+                </StackLayout>
+               
+
+                <!--Visualisar-->
+                <StackLayout 
+                    IsVisible="{Binding IsBaixar, Mode=TwoWay, Converter={StaticResource boolInvert}}"
+                    Grid.Row="0" 
+                    Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LerCommand}" />
+                    </StackLayout.GestureRecognizers>
+
+                    <mi:IconLabel 
+                        FontSize="26"
+                        Icon="ic_library_books" 
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        TextColor="{StaticResource GreyLiberi}" >
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LerCommand}" />
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Margin="0"
+                        Text="Ler"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        FontSize="Small"
+                        TextColor="{StaticResource GreyLiberi}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LerCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+
+                <!--Delete-->
+                <StackLayout 
+                    IsVisible="{Binding IsBaixar, Mode=TwoWay, Converter={StaticResource boolInvert}}"
+                    Grid.Row="1" 
+                    Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DeleteCommand}" />
+                    </StackLayout.GestureRecognizers>
+
+                    <mi:IconLabel 
+                        FontSize="26"
+                        Icon="ic_delete" 
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        TextColor="{StaticResource GreyLiberi}" >
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DeleteCommand}" />
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Margin="5,0,0,0"
+                        Text="Excluir Livro"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        FontSize="Small"
+                        TextColor="{StaticResource GreyLiberi}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DeleteCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+
+                <!--Configuração-->
+                <StackLayout 
+                    IsVisible="{Binding IsBaixar, Mode=TwoWay}"
+                    Grid.Row="2" 
+                    Orientation="Horizontal">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding ConfigCommand}" />
+                    </StackLayout.GestureRecognizers>
+
+                    <mi:IconLabel 
+                        FontSize="26"
+                        Icon="ic_settings" 
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="Center"
+                        HorizontalOptions="End"
+                        TextColor="{StaticResource GreyLiberi}" />
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Margin="5,0,0,0"
+                        Text="Configurações"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        VerticalOptions="Center"
+                        VerticalTextAlignment="Center"
+                        FontSize="Small"
+                        TextColor="{StaticResource GreyLiberi}" />
+
+
+                </StackLayout>
+
+            </Grid>
+        </Grid>
+
+        <StackLayout 
+            Grid.Row="1"
+            Orientation="Vertical">
+
+            <!-- Titulo do Livro -->
+            <Label 
+                Style="{StaticResource LabelDefault}"
+                Margin="10,10,10,0"
+                Text="{Binding Item.Titulo}"
+                LineBreakMode="TailTruncation"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="Center"
+                FontSize="Medium"
+                TextColor="{StaticResource GreyLiberi}"/>
+
+            <!-- Estrelas de avaliação -->
+            <StackLayout 
+                Spacing="0"
+                Margin="10,0,10,0"
+                HorizontalOptions="CenterAndExpand"
+                Orientation="Horizontal">
+
+                <rating:SfRating 
+                    x:Name="rating" ItemCount="5" HorizontalOptions="End" ReadOnly="True"
+                    VerticalOptions="CenterAndExpand" Precision="Exact" ItemSize="18" Value="{Binding Item.Avaliacao}"
+                    RatingSettings="{Binding Item.Avaliacao, Converter={StaticResource doubleTorattings}" >
+                    <rating:SfRating.RatingSettings>
+                        <rating:SfRatingSettings RatedFill="{StaticResource BackgroundColorSelect}" UnRatedFill="{StaticResource BackgroundColorDeselect}" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                    </rating:SfRating.RatingSettings>
+                </rating:SfRating>
+
+            </StackLayout>
+            
+        </StackLayout>
+
+        <Label 
+            Grid.Row="2"
+            Style="{StaticResource LabelDefault}"
+            Margin="20,0,20,5"
+            Text="{Binding Item.Percentual,StringFormat='{0}%'}"
+            VerticalOptions="EndAndExpand"
+            VerticalTextAlignment="End"
+            HorizontalOptions="EndAndExpand"
+            HorizontalTextAlignment="End"
+            FontSize="Small"
+            TextColor="{StaticResource GreyLiberi}"/>
+        
+        <local:CustomProgressBar 
+                Grid.Row="3"
+                Margin="20,0,20,0"
+                Progress="{Binding Item.Percentual, Converter={StaticResource percent}" />
+
+        <!-- Detalhes do livro -->
+        <ScrollView
+            Margin="10,10,10,5"
+            Padding="5"
+            Grid.Row="4">
+
+            <StackLayout
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="FillAndExpand"
+                Orientation="Vertical">
+
+                <!-- Titulo do Livro -->
+                <Label 
+                    Style="{StaticResource LabelDefault}"
+                    Margin="0"
+                    Text="{Binding Item.Titulo}"
+                    LineBreakMode="TailTruncation"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Small"
+                    TextColor="{StaticResource GreyLiberi}"/>
+
+                <Label 
+                    Style="{StaticResource LabelDefault}"
+                    Margin="0"
+                    Text="{Binding Item.Autor}"
+                    LineBreakMode="TailTruncation"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Small"
+                    TextColor="{StaticResource GreyLiberi}"/>
+
+                <Label 
+                    Style="{StaticResource LabelDefault}"
+                    Margin="0"
+                    Text="{Binding Item.DtaCadastro, StringFormat='Ano: {0}'}"
+                    LineBreakMode="TailTruncation"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Small"
+                    TextColor="{StaticResource GreyLiberi}"/>
+
+                <Label 
+                    Style="{StaticResource LabelDefault}"
+                    Margin="0,20,0,5"
+                    Text="{Binding Item.Sinopse}"
+                    HorizontalOptions="StartAndExpand"
+                    HorizontalTextAlignment="Start"
+                    FontSize="Small"
+                    TextColor="{StaticResource GreyLiberi}"/>
+
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="FillAndExpand"
+                    Orientation="Horizontal"
+                    Margin="0,10,0,20">
+
+                    <mi:IconLabel 
+                        FontSize="20"
+                        Icon="ic_chat_bubble" 
+                        VerticalTextAlignment="Start"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"
+                        TextColor="{StaticResource GreenLiberi}">
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ComentarioCommand}"/>
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Margin="5,0,0,0"
+                        Text="COMENTÁRIOS"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"
+                        FontSize="Medium"
+                        TextColor="{StaticResource GreyLiberi}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding ComentarioCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+
+                </StackLayout>
+
+                <Grid
+                    IsVisible="{Binding IsVisibleComentario}"
+                    ColumnSpacing="0"
+                    RowSpacing="0">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="2*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <ffimageloading:CachedImage 
+                                    Grid.Column="0"
+                                    Grid.Row="0"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Start"
+                                    Source="{Binding ImageSource}" 
+                                    DownsampleToViewSize="true"
+                                    CacheType="Memory"
+                                    HeightRequest="60"
+                                    WidthRequest="60"
+                                    FadeAnimationEnabled="true"
+                                    LoadingPlaceholder="avatar"
+                                    ErrorPlaceholder="avatar">
+                        <ffimageloading:CachedImage.Transformations>
+                            <fftransformations:CircleTransformation/>
+                        </ffimageloading:CachedImage.Transformations>
+                    </ffimageloading:CachedImage>
+                    
+                    <StackLayout 
+                        Grid.Column="1" 
+                        Orientation="Vertical">
+
+                        <Label 
+                            Style="{StaticResource LabelDefault}"
+                            Margin="5,0,0,0"
+                            Text="{Binding Comentario.nome}"
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Start"
+                            FontSize="Small"
+                            TextColor="{StaticResource GreyLiberi}"/>
+
+                        <Label 
+                            Style="{StaticResource LabelDefault}"
+                            Margin="5,0,0,0"
+                            Text="{Binding Comentario.dtaPubli, StringFormat='{0:dd/MM/yy à\\s HH:mm}'}" 
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Start"
+                            FontSize="Micro"
+                            TextColor="{StaticResource GreyLiberi}"/>
+
+                        <Label 
+                            Style="{StaticResource LabelDefault}"
+                            Margin="5,0,0,0"
+                            Text="{Binding Comentario._Comentario}"
+                            HorizontalOptions="StartAndExpand"
+                            HorizontalTextAlignment="Start"
+                            FontSize="Small"
+                            TextColor="{StaticResource GreyLiberi}"/>
+                        
+                    </StackLayout>
+
+                    <StackLayout 
+                        Grid.Column="2" 
+                        Grid.Row="0"
+                        Orientation="Horizontal"
+                        VerticalOptions="Start">
+
+                        <rating:SfRating 
+                            x:Name="ratingcomentario" ItemCount="5" HorizontalOptions="End" ReadOnly="True"
+                            VerticalOptions="CenterAndExpand" Precision="Exact" ItemSize="12" Value="{Binding Comentario.avaliacao}"
+                            RatingSettings="{Binding Comentario.avaliacao, Converter={StaticResource doubleTorattings}">
+                            <rating:SfRating.RatingSettings>
+                                <rating:SfRatingSettings RatedFill="{StaticResource BackgroundColorSelect}" UnRatedFill="{StaticResource BackgroundColorDeselect}" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                            </rating:SfRating.RatingSettings>
+                        </rating:SfRating>
+
+                    </StackLayout>
+                    
+                </Grid>
+
+                <Button 
+                    Margin="0,5,0,0"
+                    Style="{StaticResource ButtonStyle}"
+                    Image="ic_comment"
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="Start"
+                    Text="+ Adicionar comentário" 
+                    Command="{Binding ComentarioCommand}"/>
+                
+            </StackLayout>
+
+        </ScrollView>
+    </Grid>
+</ContentPage>

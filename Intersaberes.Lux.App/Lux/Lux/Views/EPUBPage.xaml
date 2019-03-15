@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lux.Helpers;assembly=Lux"
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:control="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+             x:Class="Lux.Views.EPUBPage"
+             Title="{Binding Title}">
+    <ContentPage.Content>
+        
+        <StackLayout Spacing="0">
+          
+            <local:WebCustomView
+                x:Name="webViewExibe"
+                Navigated="OnNavigated"
+                Margin="0"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="FillAndExpand" 
+                Uri="{Binding EpubLivro.UriSource, Mode=TwoWay}"
+                FontSize="{Binding EpubLivro.FontSize, Mode=TwoWay}" 
+                FontType="{Binding EpubLivro.FontType, Mode=TwoWay}"
+                ColorType="{Binding EpubLivro.ColorType, Mode=TwoWay}"
+                SearchVisible="{Binding EpubLivro.SearchVisible, Mode=TwoWay}"
+                ScrollPercenteReturn="{Binding EpubLivro.ScrollPercenteReturn, Mode=TwoWay}" />
+           
+        </StackLayout>
+                       
+    </ContentPage.Content>
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem 
+            Order="Primary" 
+            Icon="ic_font" 
+            Priority="0" 
+            Command="{Binding ConfigLeitorCommand}"/>
+
+        <ToolbarItem 
+            Order="Primary" 
+            Icon="ic_share" 
+            Priority="1" 
+            Command="{Binding ShareLeitorCommand}"/>
+            
+<!--        <ToolbarItem 
+            Order="Primary" 
+            Icon="ic_search" 
+            Priority="2"
+            Command="{Binding SearchLeitorCommand}" />-->
+            
+    </ContentPage.ToolbarItems>
+
+</ContentPage>

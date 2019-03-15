@@ -1,0 +1,9 @@
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/bin/Release/netstandard2.0/Leitor.deps.json
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/bin/Release/netstandard2.0/Leitor.dll
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/bin/Release/netstandard2.0/Leitor.pdb
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/obj/Release/netstandard2.0/Leitor.csproj.CoreCompileInputs.cache
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/obj/Release/netstandard2.0/Leitor.AssemblyInfoInputs.cache
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/obj/Release/netstandard2.0/Leitor.AssemblyInfo.cs
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/obj/Release/netstandard2.0/Leitor.dll
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/obj/Release/netstandard2.0/Leitor.pdb
+/Users/renantoniolorocha/Liberi/Intersaberes.Lux.App/Leitor/obj/Release/netstandard2.0/Leitor.csprojAssemblyReference.cache

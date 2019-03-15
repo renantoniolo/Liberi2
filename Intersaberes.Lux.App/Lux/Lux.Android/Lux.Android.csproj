@@ -1,0 +1,290 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC77CE92-62CB-4FE7-873D-0439C0E4CEE1}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Lux.Droid</RootNamespace>
+    <AssemblyName>Lux.Android</AssemblyName>
+    <TargetFrameworkVersion>v8.0</TargetFrameworkVersion>
+    <AndroidApplication>True</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
+    <AndroidResgenClass>Resource</AndroidResgenClass>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+    <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
+    <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <AndroidKeyStore>false</AndroidKeyStore>
+    <AndroidSigningKeyStore>C:\Users\99000658\AppData\Local\Xamarin\Mono for Android\Keystore\StartupBit\StartupBit.keystore</AndroidSigningKeyStore>
+    <AndroidSigningStorePass>sunrise</AndroidSigningStorePass>
+    <AndroidSigningKeyAlias>StartupBit</AndroidSigningKeyAlias>
+    <AndroidSigningKeyPass>sunrise</AndroidSigningKeyPass>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug</OutputPath>
+    <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+<AndroidKeyStore></AndroidKeyStore>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidManagedSymbols>true</AndroidManagedSymbols>
+    <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
+    <DefineConstants>
+    </DefineConstants>
+<AndroidSigningKeyStore></AndroidSigningKeyStore>
+<AndroidSigningStorePass></AndroidSigningStorePass>
+<AndroidSigningKeyAlias></AndroidSigningKeyAlias>
+<AndroidSigningKeyPass></AndroidSigningKeyPass>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Xml" />
+    <Reference Include="ImprovedCompression">
+      <HintPath>..\..\..\ImprovedCompression.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="CarouselView.FormsPlugin">
+      <Version>5.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="Com.Airbnb.Xamarin.Forms.Lottie">
+      <Version>2.2.0</Version>
+    </PackageReference>
+    <PackageReference Include="LiveXAML">
+      <Version>2.1.22</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>11.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="PCLAppConfig">
+      <Version>0.3.4</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.DeviceOrientation">
+      <Version>1.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Rg.Plugins.Popup">
+      <Version>1.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Syncfusion.Xamarin.SfRating">
+      <Version>16.1.0.37</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.SimpleAudioPlayer">
+      <Version>1.1.0</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugins.Forms.RoundedBoxView">
+      <Version>1.0.0.7</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Transformations">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Forms" Version="3.2.0.839982" />
+    <PackageReference Include="Xamarin.Android.Support.Design" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.AppCompat" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v4" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.CardView" Version="25.4.0.2" />
+    <PackageReference Include="Xamarin.Android.Support.v7.MediaRouter" Version="25.4.0.2" />
+    <PackageReference Include="Xam.FormsPlugin.MaterialIcons">
+      <Version>0.0.1-alpha</Version>
+    </PackageReference>
+    <PackageReference Include="Plugin.Share">
+      <Version>7.1.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xam.Plugin.Media">
+      <Version>3.1.3</Version>
+    </PackageReference>
+    <PackageReference Include="DLToolkit.Forms.Controls.FlowListView">
+      <Version>2.0.10</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Forms">
+      <Version>2.4.3.840</Version>
+    </PackageReference>
+    <PackageReference Include="MonkeyCache">
+      <Version>0.1.0.10-beta</Version>
+    </PackageReference>
+    <PackageReference Include="MonkeyCache.FileStore">
+      <Version>0.1.0.10-beta</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Analytics">
+      <Version>1.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Crashes">
+      <Version>1.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Distribute">
+      <Version>1.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.AppCenter.Push">
+      <Version>1.7.0</Version>
+    </PackageReference>
+    <PackageReference Include="HtmlAgilityPack">
+      <Version>1.8.7</Version>
+    </PackageReference>
+    <PackageReference Include="Realm">
+      <Version>3.2.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Custom\MyProgressBarRender.cs" />
+    <Compile Include="Custom\MySwitchRendererd.cs" />
+    <Compile Include="Custom\SliderRenderer.cs" />
+    <Compile Include="Dependencias\Config.cs" />
+    <Compile Include="Dependencias\Crypto.cs" />
+    <Compile Include="Custom\WebCustom.cs" />
+    <Compile Include="MainActivity.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Custom\BrightnessService_Droid.cs" />
+    <Compile Include="Renderers\XamGridViewRenderer.cs" />
+    <Compile Include="SplashScreen.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\book.json" />
+    <AndroidAsset Include="Assets\loading_hamster.json" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+    <AndroidAsset Include="Assets\Montserrat-Regular.ttf" />
+    <AndroidAsset Include="Assets\Montserrat-Italic.ttf" />
+    <None Include="FodyWeavers.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\layout\Tabbar.axml" />
+    <AndroidResource Include="Resources\layout\Toolbar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable-hdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_close.png" />
+    <AndroidResource Include="Resources\drawable\ic_close.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_share.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_share.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_share.png" />
+    <AndroidResource Include="Resources\drawable\ic_share.png" />
+    <AndroidResource Include="Resources\drawable\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_search.png" />
+    <AndroidResource Include="Resources\drawable\ic_font.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_font.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_font.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_font.png" />
+    <AndroidResource Include="Resources\drawable\logo_intersaberes_intro.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bg_livroDetalhes.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bg_livroDetalhes.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bg_livroDetalhes.png" />
+    <AndroidResource Include="Resources\drawable\bg_livroDetalhes.png" />
+    <AndroidResource Include="Resources\drawable\logo_intersaberes.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_list_grid.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_list_grid.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_list_grid.png" />
+    <AndroidResource Include="Resources\drawable\ic_list_grid.png" />
+    <AndroidResource Include="Resources\drawable\ic_list_book.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_list_book.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_list_book.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_list_book.png" />
+    <AndroidResource Include="Resources\drawable\ic_comment.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_comment.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_comment.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_comment.png" />
+    <AndroidResource Include="Resources\drawable\loader_intersaberes.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable\splash_screen.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bookLoading.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bookLoading.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bookLoading.png" />
+    <AndroidResource Include="Resources\drawable\bookLoading.png" />
+    <AndroidResource Include="Resources\drawable\bookUnavailable.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\bookUnavailable.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\bookUnavailable.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\bookUnavailable.png" />
+    <AndroidResource Include="Resources\drawable\ic_searchGlobal.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_searchGlobal.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_searchGlobal.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_searchGlobal.png" />
+    <AndroidResource Include="Resources\drawable\liberi_logo_topo.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo_liberi.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo_liberi.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo_liberi.png" />
+    <AndroidResource Include="Resources\drawable\logo_liberi.png" />
+    <AndroidResource Include="Resources\drawable\background_coruja_login.png" />
+    <AndroidResource Include="Resources\drawable\loader_liberi.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\logo_liberi_sobre.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\logo_liberi_sobre.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\logo_liberi_sobre.png" />
+    <AndroidResource Include="Resources\drawable\logo_liberi_sobre.png" />
+    <AndroidResource Include="Resources\drawable\bg_bannerstore_coruja.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable\ic_facebook.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_google.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_google.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\ic_google.png" />
+    <AndroidResource Include="Resources\drawable\ic_google.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Lux\Lux.csproj">
+      <Project>{74519BAB-5D57-48D3-B6A7-EDC5F8E7F6A8}</Project>
+      <Name>Lux</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\backgroundDetalhesLivro.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leftGreenStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\leftGreyStar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-hdpi\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xhdpi\avatar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable-xxhdpi\avatar.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+</Project>

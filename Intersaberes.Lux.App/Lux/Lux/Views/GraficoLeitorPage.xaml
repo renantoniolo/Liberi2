@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+    xmlns:abstractions="clr-namespace:RoundedBoxView.Forms.Plugin.Abstractions;assembly=RoundedBoxView.Forms.Plugin.Abstractions" 
+    xmlns:control="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+    xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+    xmlns:local="clr-namespace:Lux.Helpers"
+    BackgroundColor="#FFF"
+    x:Class="Lux.Views.GraficoLeitorPage">
+    
+    <ContentPage.Content>
+        <StackLayout 
+            x:Name="StackTabPage"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Margin="10">
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label 
+                    Text="Gráficos" 
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"
+                    FontSize="Large"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource LabelDefault}"
+                    TextColor="{StaticResource GreyLiberi}"/>
+                
+                <Image 
+                    WidthRequest="32" 
+                    HeightRequest="32" 
+                    Margin="10" 
+                    Source="ic_close" 
+                    VerticalOptions="Start"
+                    HorizontalOptions="End"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding CloseCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                
+            </StackLayout>
+                
+            <control:CarouselViewControl 
+                 ItemsSource="{Binding ListGraficos,Mode=TwoWay}"
+                 ShowIndicators="True"
+                 ShowArrows="True"
+                 VerticalOptions="FillAndExpand" 
+                 HorizontalOptions="FillAndExpand">
+
+                <control:CarouselViewControl.ItemTemplate>
+                    <DataTemplate>
+
+                        <WebView 
+                            HorizontalOptions="FillAndExpand" 
+                            VerticalOptions="FillAndExpand" 
+                                         Source="{Binding}" />
+
+                    </DataTemplate>
+
+                </control:CarouselViewControl.ItemTemplate>
+            </control:CarouselViewControl>
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

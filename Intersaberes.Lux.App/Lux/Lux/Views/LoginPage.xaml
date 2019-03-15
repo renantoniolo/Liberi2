@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lux.Views.LoginPage"
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             BackgroundImage="background_coruja_login"
+             Title="Login">
+    
+    <ContentPage.Content>
+
+        <Grid
+            ColumnSpacing="0"
+            RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout
+                Grid.Row="1"
+                Margin="0,40,0,0">
+
+                <Image 
+                    Source="logo_liberi" 
+                    Aspect="AspectFit"
+                    Margin="0,0,0,30"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+                   
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Margin="45,0,45,0"
+                    Padding="15"
+                    BackgroundColor="{StaticResource BackgroundColorLoginFrame}"
+                    Opacity="0.6">
+
+                    <Label 
+                        Text="LOGIN:"
+                        TextColor="#FFF"
+                        Style="{StaticResource LabelDefault}" />
+
+                    <Entry 
+                        Placeholder="cpf ou e-mail" 
+                        PlaceholderColor="Gray" 
+                        BackgroundColor="White"
+                        TextColor="{StaticResource BackgroundColorLoginFrame}"
+                        Text="{Binding InputUser, Mode=TwoWay}" />
+
+                    <Label 
+                        TextColor="#FFF"
+                        Text="SENHA:"
+                        Style="{StaticResource LabelDefault}" />
+
+                    <Entry 
+                        Placeholder="senha" 
+                        PlaceholderColor="Gray" 
+                        BackgroundColor="White"
+                        TextColor="{StaticResource BackgroundColorLoginFrame}"
+                        IsPassword="True" 
+                        Text="{Binding InputPass, Mode=TwoWay}" />
+
+                    <StackLayout Orientation="Horizontal">
+
+                        <Label
+                            Margin="0,0,0,5"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            VerticalOptions="End"
+                            FontSize="Small"
+                            FontAttributes="Italic"
+                            TextColor="#FFF"
+                            Text="Esqueci minha senha"
+                            Style="{StaticResource LabelDefault}" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding EsqueceuSenhaCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Button 
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="End"
+                            Text="OK"
+                            FontAttributes="Bold"
+                            WidthRequest="56"
+                            HeightRequest="48"
+                            Style="{StaticResource ButtonStyle}" 
+                            IsEnabled="{Binding BtnEntrar}" 
+                            Command="{Binding LoginCommand}" />
+                           
+                    </StackLayout>
+
+                </StackLayout>
+               
+               <Grid
+                    ColumnSpacing="5"
+                    RowSpacing="0"
+                    Margin="45,10,45,0"
+                    IsVisible="false">
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <StackLayout
+                        Grid.Column="0"
+                        Orientation="Horizontal"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Padding="10"
+                        BackgroundColor="#CCC"
+                        Opacity="0.8">
+
+                        <Label
+                            Text="Entrar com"
+                            TextColor="#000"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            FontSize="Micro"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <ffimageloading:CachedImage 
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center"
+                            Source="ic_google" 
+                            DownsampleToViewSize="true"
+                            CacheType="Memory"
+                            HeightRequest="16"
+                            WidthRequest="16"
+                            FadeAnimationEnabled="true">
+                        </ffimageloading:CachedImage>
+                        
+                    </StackLayout>
+
+                    <StackLayout
+                        Grid.Column="1"
+                        Orientation="Horizontal"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Padding="10"
+                        BackgroundColor="#3B5998"
+                        Opacity="0.8">
+
+                        <Label
+                            Text="Entrar com"
+                            TextColor="#FFF"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            FontSize="Micro"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <ffimageloading:CachedImage 
+                     
+                            HorizontalOptions="StartAndExpand"
+                            VerticalOptions="Center"
+                            Source="ic_facebook" 
+                            DownsampleToViewSize="true"
+                            CacheType="Memory"
+                            HeightRequest="16"
+                            WidthRequest="16"
+                            FadeAnimationEnabled="true">
+                        </ffimageloading:CachedImage>
+
+                    </StackLayout>
+                    
+                    
+                </Grid>
+
+            </StackLayout>
+            <!-- fim da opcoes de login -->
+            
+            <StackLayout
+                Grid.Row="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Margin="45,15,45,0"
+                Padding="10"
+                BackgroundColor="{StaticResource GreenLiberi}" 
+                Opacity="0.8">
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding CadastroCommand}" />
+                </StackLayout.GestureRecognizers>
+
+                <Label
+                    Text="Cadastrar"
+                    TextColor="#FFF"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Medium"
+                    Style="{StaticResource LabelDefault}" />
+            
+            </StackLayout>
+            
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

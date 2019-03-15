@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Paths>
+  <ManifestDocuments>
+    <ManifestDocument>obj/Debug/lp/15/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/21/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/23/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/24/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/26/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/29/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/72/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/74/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/75/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/76/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/77/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/78/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/79/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/80/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/81/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/82/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/83/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/84/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/85/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/86/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/87/jl/AndroidManifest.xml</ManifestDocument>
+    <ManifestDocument>obj/Debug/lp/88/jl/AndroidManifest.xml</ManifestDocument>
+  </ManifestDocuments>
+  <NativeLibraries />
+  <Jars>
+    <Jar>obj/Debug/lp/12/jl/formsviewgroup.jar</Jar>
+    <Jar>obj/Debug/lp/15/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/21/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/23/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/24/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/26/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/29/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/72/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/73/jl/support-annotations.jar</Jar>
+    <Jar>obj/Debug/lp/74/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/75/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/76/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/77/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/78/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/79/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/80/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/81/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/82/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/83/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/84/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/85/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/86/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/87/jl/bin/classes.jar</Jar>
+    <Jar>obj/Debug/lp/88/jl/bin/classes.jar</Jar>
+  </Jars>
+</Paths>

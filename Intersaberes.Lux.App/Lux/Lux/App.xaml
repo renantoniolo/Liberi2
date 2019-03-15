@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lux.App">
+    <Application.Resources>
+
+        <!-- Application resource dictionary -->
+        <ResourceDictionary>
+
+            <!-- Navigation Page -->
+            <Style TargetType="NavigationPage">
+                <Setter Property="BarBackgroundColor" Value="#3CB3BE"/>
+                <Setter Property="BarTextColor" Value="#58595b"/>
+            </Style>
+
+
+
+            <!-- FONT -->
+            <OnPlatform x:TypeArguments="x:String" x:Key="Montserrat-Font">
+                <On Platform="Android" Value="Montserrat-Regular.ttf#Montserrat" />
+                <On Platform="iOS" Value="Montserrat-Regular" />
+            </OnPlatform>
+
+            <!-- FONT ITALIC -->
+            <OnPlatform x:TypeArguments="x:String" x:Key="Montserrat-Font-Italic">
+                <On Platform="Android" Value="Montserrat-Italic.ttf#Montserrat" />
+                <On Platform="iOS" Value="Montserrat-Italic.ttf" />
+            </OnPlatform>
+           
+           
+            
+            <!-- Cores Primarias -->
+            <Color x:Key="GreyLiberi">#737373</Color>
+            <Color x:Key="GreyLight">#C9C9CE</Color>
+            <Color x:Key="GreenLiberi">#2497A2</Color>
+            <Color x:Key="DisableColorLiberi">#A5A5A5</Color>
+
+            <!-- Cores Aplicaivo -->
+            <Color x:Key="BackgroundColorNavigationBar">#C9C8C8</Color>
+            <Color x:Key="BackgroundColorViewPage">#FFFFFF</Color>
+            <Color x:Key="BackgroundColorLoginFrame">#1A1A1A</Color>
+            <Color x:Key="BackgroundColorLivroDestaque">#EBEBEB</Color>
+            <Color x:Key="GreyMenu">#58595b</Color>
+
+            <!-- Stars -->
+            <Color x:Key="BackgroundColorSelect">#585858</Color>
+            <Color x:Key="BackgroundColorDeselect">#9C9C9C</Color>
+            <!-- Cores Leitor -->
+            <Color x:Key="BackgroundColorLeitor">#686868</Color>
+            <Color x:Key="BackgroundColorButtonLeitor">#525252</Color>
+
+            <!-- Botoes, Labels, SearchBar e TextBox -->
+          
+
+            <!-- SearchBarStyle -->
+            <Style x:Key="SearchBarStyle" TargetType="SearchBar">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorNavigationBar}"/>
+                <Setter Property="TextColor" Value="{StaticResource GreyLiberi}"/>
+                <Setter Property="Text" Value="Pesquisar..."/>
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Botao -->
+            <Style x:Key="ButtonStyle" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource GreenLiberi}"/>
+                <Setter Property="TextColor" Value="#FFF"/>
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Botao Leitor -->
+            <Style x:Key="ButtonStyleLeitor" TargetType="Button">
+                <Setter Property="BackgroundColor" Value="{StaticResource BackgroundColorButtonLeitor}"/>
+                <Setter Property="TextColor" Value="#FFF"/>
+                <Setter Property="Text" Value="Voltar"/>
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="VerticalOptions" Value="End" />
+                <Setter Property="HorizontalOptions" Value="FillAndExpand" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Entry -->
+            <Style x:Key="EntryStyle" TargetType="Entry">
+                <Setter Property="BackgroundColor" Value="#FFF"/>
+                <Setter Property="TextColor" Value="{StaticResource GreyLiberi}"/>
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+            
+            <!-- Label Default -->
+            <Style x:Key="LabelDefault" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource GreyLiberi}"/>
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Label Default Italic-->
+            <Style x:Key="LabelDefaultItalic" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource GreyLiberi}"/>
+                <Setter Property="FontSize" Value="Micro" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font-Italic}" />
+            </Style>
+
+            <!-- Label Menu -->
+            <Style x:Key="LabelMenu" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource GreyMenu}"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Lable Title -->
+            <Style x:Key="LabelTitle" TargetType="Label">
+                <Setter Property="TextColor" Value="#FFF"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontAttributes" Value="Bold" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Label ListView Leitor -->
+            <Style x:Key="LabelMenuListViewLeitor" TargetType="Label">
+                <Setter Property="TextColor" Value="#FFF"/>
+                <Setter Property="FontSize" Value="Small" />
+                <Setter Property="LineBreakMode" Value="NoWrap" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Label Banner Loja -->
+            <Style x:Key="LabelBannerLoja" TargetType="Label">
+                <Setter Property="TextColor" Value="#FFF"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="LineBreakMode" Value="WordWrap" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+            <!-- Label Popup -->
+            <Style x:Key="LabelPopup" TargetType="Label">
+                <Setter Property="TextColor" Value="{StaticResource GreyLiberi}"/>
+                <Setter Property="FontSize" Value="Medium" />
+                <Setter Property="FontFamily" Value="{StaticResource Montserrat-Font}" />
+            </Style>
+
+        </ResourceDictionary>
+
+    </Application.Resources>
+</Application>

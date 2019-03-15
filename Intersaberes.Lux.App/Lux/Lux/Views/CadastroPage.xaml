@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Lux.Views.CadastroPage"
+             xmlns:local="clr-namespace:Lux.Helpers;assembly=Lux"
+             BackgroundImage="background_coruja_login"
+             Title="Cadastro">
+    
+<ContentPage.Content>
+
+    <Grid 
+        RowSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="150" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <Grid 
+            RowSpacing="0"
+            Grid.Row="0">
+
+            <Image 
+                Source="logo_liberi" 
+                Margin="0,30,0,0"
+                Aspect="AspectFit"
+                VerticalOptions="Start" 
+                HorizontalOptions="Center" />
+        </Grid>
+
+        <Grid 
+            Grid.Row="1">
+
+            <ScrollView>
+
+                <StackLayout
+                    Spacing="0"
+                    Padding="0"
+                    Margin="0,0,0,10"
+                    Orientation="Vertical"
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start" >
+                    
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Margin="45,0,45,0"
+                        Padding="15"
+                        BackgroundColor="{StaticResource BackgroundColorLoginFrame}"
+                        Opacity="0.6">
+
+                        <Label
+                            Text="CADASTRO"
+                            TextColor="#FFF"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            FontSize="Medium"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <Label 
+                            Text="NOME:"
+                            TextColor="#FFF"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <Entry 
+                            Placeholder="Nome" 
+                            PlaceholderColor="Gray" 
+                            BackgroundColor="White"
+                            TextColor="{StaticResource BackgroundColorLoginFrame}"
+                            Text="{Binding InputNome, Mode=TwoWay}" />
+
+                        <Label 
+                            Text="CPF:"
+                            TextColor="#FFF"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <local:MyMaskCPF  
+                            Placeholder="CPF" 
+                            Keyboard="Numeric"
+                            PlaceholderColor="Gray" 
+                            BackgroundColor="White"
+                            TextColor="{StaticResource BackgroundColorLoginFrame}"
+                            Text="{Binding InputCpf, Mode=TwoWay}" />
+
+                        <Label 
+                            Text="E-MAIL:"
+                            TextColor="#FFF"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <Entry 
+                            Placeholder="E-MAIL" 
+                            Keyboard="Email"
+                            PlaceholderColor="Gray" 
+                            BackgroundColor="White"
+                            TextColor="{StaticResource BackgroundColorLoginFrame}"
+                            Text="{Binding InputEmail, Mode=TwoWay}" />
+
+                        <Label 
+                            Text="SENHA:"
+                            TextColor="#FFF"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <Entry 
+                            Placeholder="SENHA" 
+                            PlaceholderColor="Gray" 
+                            BackgroundColor="White"
+                            TextColor="{StaticResource BackgroundColorLoginFrame}"
+                            IsPassword="True" 
+                            Text="{Binding InputSenha, Mode=TwoWay}" />
+
+                        <Label 
+                            Text="CONFIRMAR SENHA:"
+                            TextColor="#FFF"
+                            Style="{StaticResource LabelDefault}" />
+
+                        <Entry 
+                            Placeholder="CONFIRMAR SENHA" 
+                            PlaceholderColor="Gray" 
+                            BackgroundColor="White"
+                            TextColor="{StaticResource BackgroundColorLoginFrame}"
+                            IsPassword="True" 
+                            Text="{Binding InputConfSenha, Mode=TwoWay}" />
+
+                        <Label
+                            Margin="0,10,0,10"
+                            HorizontalOptions="CenterAndExpand"
+                            HorizontalTextAlignment="Center"
+                            VerticalOptions="End"
+                            Text="Estou de acordo com os Termos de Uso e Politica de Privacidade."
+                            TextColor="#FFF"
+                            Style="{StaticResource LabelDefault}" >
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding TermosUsoCommand}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                        <Button 
+                            HorizontalOptions="CenterAndExpand"
+                            VerticalOptions="End"
+                            Text="OK"
+                            FontAttributes="Bold"
+                            WidthRequest="56"
+                            HeightRequest="48"
+                            Style="{StaticResource ButtonStyle}" 
+                            Command="{Binding OkCommand}" />
+                               
+                    </StackLayout>
+
+                    <!-- voltar para o login -->
+                    <StackLayout
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        Margin="45,15,45,10"
+                        Padding="10"
+                        BackgroundColor="{StaticResource GreenLiberi}"
+                        Opacity="0.8">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding LoginCommand}" />
+                        </StackLayout.GestureRecognizers>
+                            
+                        <Label
+                            Text="Login"
+                            TextColor="#FFF"
+                            HorizontalOptions="Center"
+                            HorizontalTextAlignment="Center"
+                            FontSize="Medium"
+                            Style="{StaticResource LabelDefault}" />
+                            
+                    </StackLayout>
+                    
+                </StackLayout>
+                
+            </ScrollView>
+            
+        </Grid>
+
+    </Grid>
+    
+</ContentPage.Content>
+</ContentPage>

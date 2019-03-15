@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="Lux.Views.MasterPage"
+             Title="{Binding Title}"
+             BackgroundColor="{StaticResource BackgroundColorNavigationBar}">
+    <ContentPage.Content>
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="56" />
+                <RowDefinition Height="400" />
+                <RowDefinition Height="31" />
+                <RowDefinition Height="32" />
+            </Grid.RowDefinitions>
+
+            <StackLayout 
+                Grid.Row="0" 
+                Orientation="Horizontal"
+                Padding="5,20,10,5"
+                BackgroundColor="{StaticResource GreenLiberi}">
+
+                <mi:IconLabel 
+                    FontSize="30"
+                    IsVisible="{Binding BoolIconLabel}"
+                    Icon="ic_account_circle" 
+                    Margin="5,0,0,0"
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End"
+                    TextColor="#FFF" >
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSairClicked"/>
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <ffimageloading:CachedImage 
+                    HorizontalOptions="End"
+                    VerticalOptions="Center"
+                    IsVisible="{Binding BoolImageSource}"
+                    Source="{Binding ImageSource}" 
+                    DownsampleToViewSize="true"
+                    CacheType="Memory"
+                    HeightRequest="45"
+                    WidthRequest="45"
+                    FadeAnimationEnabled="true"
+                    LoadingPlaceholder="avatar"
+                    ErrorPlaceholder="avatar">
+                    <ffimageloading:CachedImage.Transformations>
+                        <fftransformations:CircleTransformation/>
+                    </ffimageloading:CachedImage.Transformations>
+                </ffimageloading:CachedImage>
+
+                <Label 
+                      HorizontalOptions="FillAndExpand" 
+                      VerticalOptions="FillAndExpand" 
+                      YAlign="Center" 
+                      Text="{Binding InputNome}" 
+                      TextColor="White"
+                      Style="{StaticResource LabelMenu}"/>
+
+                <mi:IconLabel 
+                     FontSize="30"
+                     Margin="5,0,0,0"
+                     VerticalTextAlignment="Center"
+                     VerticalOptions="CenterAndExpand"
+                     HorizontalOptions="End"
+                     Icon="ic_menu" 
+                     TextColor="#FFF">
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSairClicked"/>
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel> 
+            </StackLayout>
+            
+            <Grid
+                Grid.Row="1"
+                ColumnSpacing="0"
+                RowSpacing="20"
+                Padding="15,10,0,0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="28" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="32" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+                <!-- Inicio -->
+                <mi:IconLabel 
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Icon="ic_home" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource GreyMenu}" >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="0" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="0" 
+                    Grid.Column="1"
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Ínicio" 
+                    Style="{StaticResource LabelMenu}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="0" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Biblioteca -->
+                <mi:IconLabel 
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Icon="ic_account_balance" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource GreyMenu}"  >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="1" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="1" 
+                    Grid.Column="1" 
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Biblioteca" 
+                    Style="{StaticResource LabelMenu}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="1" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Loja Intersaberes -->
+<!--                <mi:IconLabel 
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Icon="ic_shop" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource DisableColorLiberi}">                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="2" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Loja Intersaberes" 
+                    Style="{StaticResource LabelMenu}"
+                    TextColor="{StaticResource DisableColorLiberi}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="2" />
+                    </Label.GestureRecognizers>
+                </Label>-->
+
+                <!-- Pesquisa Livro Global -->
+                <mi:IconLabel 
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Icon="ic_search" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource GreyMenu}"  >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="9" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="2" 
+                    Grid.Column="1" 
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Pesquisar livros" 
+                    Style="{StaticResource LabelMenu}"
+                    TextColor="{StaticResource GreyMenu}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="9" />
+                    </Label.GestureRecognizers>
+                </Label>
+                    
+                <!-- Meus livros -->
+                <mi:IconLabel 
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Icon="ic_book" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource GreyMenu}" >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="3" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="3" 
+                    Grid.Column="1" 
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Meus livros" 
+                    Style="{StaticResource LabelMenu}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="3" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Minhas compras -->
+<!--                <mi:IconLabel 
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Icon="ic_shopping_cart" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource DisableColorLiberi}" >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="4" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="5" 
+                    Grid.Column="1" 
+                    IsEnabled="false"
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Minhas compras" 
+                    Style="{StaticResource LabelMenu}"
+                    TextColor="{StaticResource DisableColorLiberi}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="4" />
+                    </Label.GestureRecognizers>
+                </Label>-->
+
+                <!-- Minha conta -->
+                <mi:IconLabel 
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Icon="ic_person" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource GreyMenu}" >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="5" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="4" 
+                    Grid.Column="1" 
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Minha conta" 
+                    Style="{StaticResource LabelMenu}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="5" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Configurações -->
+                <mi:IconLabel 
+                    Grid.Row="5"
+                    Grid.Column="0"
+                    Icon="ic_settings" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource GreyMenu}" >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="6" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="5" 
+                    Grid.Column="1" 
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Configurações" 
+                    Style="{StaticResource LabelMenu}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="6" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <!-- Sobre -->
+                <mi:IconLabel 
+                    Grid.Row="6"
+                    Grid.Column="0"
+                    Icon="ic_info" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="End"
+                    VerticalOptions="End"
+                    TextColor="{StaticResource GreyMenu}" >                
+                    <mi:IconLabel.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="8" />
+                    </mi:IconLabel.GestureRecognizers>
+                </mi:IconLabel>
+
+                <Label 
+                    Grid.Row="6" 
+                    Grid.Column="1" 
+                    Margin="5,0,0,0"
+                    HorizontalOptions="FillAndExpand" 
+                    VerticalOptions="End" 
+                    VerticalTextAlignment="End"
+                    Text="Sobre" 
+                    Style="{StaticResource LabelMenu}" >
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding MenuCommandCommand}"
+                            CommandParameter="8" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+            </Grid>
+
+            <BoxView     
+                Grid.Row="2"
+                Margin="0,20,0,10"
+                HeightRequest="1" 
+                BackgroundColor="{StaticResource GreyLiberi}" 
+                HorizontalOptions="FillAndExpand" />
+
+            <!-- Sair -->
+            <Label 
+                Grid.Row="3" 
+                Margin="25,0,0,0"
+                HorizontalOptions="FillAndExpand" 
+                VerticalOptions="End" 
+                VerticalTextAlignment="End"
+                Text="Sair" 
+                Style="{StaticResource LabelMenu}" >
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer 
+                        Command="{Binding MenuCommandCommand}"
+                        CommandParameter="7" />
+                </Label.GestureRecognizers>
+            </Label>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

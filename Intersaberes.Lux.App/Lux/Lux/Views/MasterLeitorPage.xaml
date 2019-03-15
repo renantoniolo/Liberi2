@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="Lux.Views.MasterLeitorPage"
+            Title="Menu Leitor"
+            BackgroundColor="{StaticResource BackgroundColorLeitor}"
+            BarBackgroundColor="{StaticResource BackgroundColorLeitor}"
+            BarTextColor="{StaticResource GreyLight}">
+    
+    <ContentPage 
+        Title="OPÇÕES"
+        BackgroundColor="{StaticResource BackgroundColorLeitor}">
+        <StackLayout>
+
+            <SearchBar 
+                Style="{StaticResource SearchBarStyle}" 
+                Placeholder="Pesquisar..."
+                TextChanged="Search_OnTextOpcoes"
+                HeightRequest="45"/>
+
+            <ListView 
+                x:Name="OpcoesListView" 
+                BackgroundColor="{StaticResource BackgroundColorLeitor}"
+                ItemsSource="{Binding Opcoes}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                SeparatorVisibility="None"
+                RefreshCommand="{Binding LoadOpcoesCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                ItemSelected="List_OnSelectedOpcoes">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout 
+                                Padding="10"
+                                BackgroundColor="{Binding backgroundColor}" >
+                                <Label 
+                                    Style="{StaticResource LabelMenuListViewLeitor}"
+                                    Text="{Binding lblView}" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button
+                Style="{StaticResource ButtonStyleLeitor}"
+                Command="{Binding VoltarCommand}"/>
+            
+        </StackLayout>
+        
+    </ContentPage>
+    
+<!--    <ContentPage 
+        Title="NOTAS"
+        BackgroundColor="{StaticResource BackgroundColorLeitor}">
+        <StackLayout>
+
+            <SearchBar 
+                Style="{StaticResource SearchBarStyle}"
+                HeightRequest="45"/>
+
+             <Label
+                Margin="15,5,15,5"
+                Style="{StaticResource LabelMenuListViewLeitor}"
+                TextColor="{StaticResource GreyLight}"
+                Text="Para adicionar uma nota, selecione um trecho de texto."
+                LineBreakMode="WordWrap"
+                HeightRequest="40"
+                HorizontalTextAlignment="Center"
+                VerticalTextAlignment="Center"
+                HorizontalOptions="CenterAndExpand"
+                VerticalOptions="CenterAndExpand"/>
+
+            <ListView
+                BackgroundColor="{StaticResource BackgroundColorLeitor}"
+                SeparatorVisibility="None" >
+                
+            </ListView>
+            
+            <Button
+                Style="{StaticResource ButtonStyleLeitor}"
+                Command="{Binding VoltarCommand}"/>
+
+        </StackLayout>
+        
+    </ContentPage>-->
+    
+</TabbedPage>

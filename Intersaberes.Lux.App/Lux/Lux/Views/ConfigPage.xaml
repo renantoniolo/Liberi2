@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lux.Views.ConfigPage"
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:cs="clr-namespace:Lux.Helpers">
+    <ContentPage.Content>
+        
+        <Grid 
+            ColumnSpacing="0"
+            RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <StackLayout 
+                Grid.Row="0"
+                Spacing="0"
+                BackgroundColor="{StaticResource GreyLight}"
+                Orientation="Horizontal">
+
+                <mi:IconLabel 
+                    Icon="ic_settings" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="End"
+                    HorizontalOptions="EndAndExpand"
+                    TextColor="#2497A2" />
+
+                <Label
+                    Text="CONFIGURAÇÕES DE DOWNLOAD"
+                    Margin="5,0,0,0"
+                    Style="{StaticResource LabelDefault}" 
+                    FontSize="Medium" 
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Start"
+                    HorizontalOptions="StartAndExpand" />
+
+            </StackLayout>
+            
+            <StackLayout 
+                Grid.Row="1"
+                Margin="20,20,20,20" 
+                Padding="5">
+
+                <Label 
+                      HorizontalOptions="Start" 
+                      YAlign="Center" 
+                      FontSize="14"
+                      Text="Download do livro" 
+                      TextColor="{StaticResource GreyMenu}"
+                      Style="{StaticResource LabelMenu}"/>
+
+                <StackLayout Orientation="Horizontal">
+
+                    <cs:CustomSwitch IsToggled="{Binding config.VideoDownload, Mode=TwoWay}" 
+                                     SwitchOffColor="#000"
+                                     SwitchOnColor="{StaticResource GreenLiberi}" 
+                                     SwitchThumbColor="#CCC"/>
+
+                    <Label 
+                      HorizontalOptions="Start" 
+                      YAlign="Center" 
+                      FontSize="10"
+                      Text="Baixar todos os videos com o livro" 
+                      TextColor="{StaticResource GreyMenu}"
+                      Style="{StaticResource LabelMenu}"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    
+                    <cs:CustomSwitch IsToggled="{Binding config.ImageDownload, Mode=TwoWay}" 
+                         SwitchOffColor="#000"
+                         SwitchOnColor="{StaticResource GreenLiberi}" 
+                         SwitchThumbColor="#CCC"/>
+                    
+                    <Label 
+                      HorizontalOptions="Start" 
+                      YAlign="Center" 
+                      FontSize="10"
+                      Text="Baixar todas as imagens com o livro" 
+                      TextColor="{StaticResource GreyMenu}"
+                      Style="{StaticResource LabelMenu}"/>
+                </StackLayout>
+
+                <StackLayout Orientation="Horizontal">
+                    
+                    <cs:CustomSwitch IsToggled="{Binding config.SoundDownload, Mode=TwoWay}" 
+                         SwitchOffColor="#000"
+                         SwitchOnColor="{StaticResource GreenLiberi}" 
+                         SwitchThumbColor="#CCC"/>
+                    
+                    <Label 
+                      HorizontalOptions="Start" 
+                      YAlign="Center" 
+                      FontSize="10"
+                      Text="Baixar todos os áudios com o livro" 
+                      TextColor="{StaticResource GreyMenu}"
+                      Style="{StaticResource LabelMenu}"/>
+                </StackLayout>
+
+                <Button 
+                    Style="{StaticResource ButtonStyle}"
+                    Text="SALVAR ALTERAÇÕES"
+                    Margin="40,0,40,0"
+                    Command="{Binding ExecuteCommand}"/>
+                
+            </StackLayout>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+    
+</ContentPage>

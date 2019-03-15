@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+            xmlns:abstractions="clr-namespace:RoundedBoxView.Forms.Plugin.Abstractions;assembly=RoundedBoxView.Forms.Plugin.Abstractions" 
+            xmlns:control="clr-namespace:CarouselView.FormsPlugin.Abstractions;assembly=CarouselView.FormsPlugin.Abstractions"
+            xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+            xmlns:forms="clr-namespace:Plugin.MediaManager.Forms;assembly=Plugin.MediaManager.Forms"
+            xmlns:local="clr-namespace:Lux.Helpers"
+            x:Class="Lux.Views.VideoLeitorPage">
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:BoolConverter x:Key="boolInvert"></local:BoolConverter>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+    
+     <ContentPage.Content>
+        <StackLayout 
+            x:Name="StackTabPage"
+            VerticalOptions="FillAndExpand"
+            HorizontalOptions="FillAndExpand"
+            Margin="10">
+
+            <StackLayout Orientation="Horizontal">
+
+                <Label 
+                    Text="Videos" 
+                    HorizontalOptions="StartAndExpand"
+                    VerticalOptions="Center"
+                    FontSize="Large"
+                    Margin="10,0,0,0"
+                    Style="{StaticResource LabelDefault}"
+                    TextColor="{StaticResource GreyLiberi}"/>
+                
+                <Image 
+                    WidthRequest="32" 
+                    HeightRequest="32" 
+                    Margin="10" 
+                    Source="ic_close" 
+                    VerticalOptions="Start"
+                    HorizontalOptions="End"  >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer 
+                            Command="{Binding CloseCommand}" />
+                    </Image.GestureRecognizers>
+                </Image>
+                
+            </StackLayout>
+                
+                <control:CarouselViewControl 
+                     ItemsSource="{Binding ListVideos,Mode=TwoWay}"
+                     ShowIndicators="True"
+                     ShowArrows="True"
+                     VerticalOptions="FillAndExpand" 
+                     HorizontalOptions="FillAndExpand">
+
+                    <control:CarouselViewControl.ItemTemplate>
+                        <DataTemplate>
+                        
+                        <ScrollView>
+                            <Grid
+                                ColumnSpacing="0"
+                                RowSpacing="0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                
+                                <forms:VideoView 
+                                    Grid.Row="0" 
+                                    HorizontalOptions="FillAndExpand" 
+                                    VerticalOptions="FillAndExpand" 
+                                    AspectMode="AspectFill" 
+                                    Source="{Binding Caminho}" />
+                                
+                                    <StackLayout 
+                                        Grid.Row="1" 
+                                        Orientation="Horizontal" 
+                                        VerticalOptions="StartAndExpand"
+                                        HorizontalOptions="CenterAndExpand"
+                                        Margin="10"
+                                        Padding="0">
+
+                                        <mi:IconLabel 
+                                                IsVisible="{Binding IsPlay, Converter={StaticResource boolInvert}"
+                                                Icon="ic_play_arrow" 
+                                                FontSize="40" 
+                                                VerticalOptions="Center">
+                                            <mi:IconLabel.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding PlayerCommand}" CommandParameter="{Binding Id}"/>
+                                            </mi:IconLabel.GestureRecognizers>
+                                        </mi:IconLabel>
+
+                                        <mi:IconLabel 
+                                                IsVisible="{Binding IsPlay}"
+                                                Icon="ic_pause" 
+                                                FontSize="40" 
+                                                VerticalOptions="Center">
+                                            <mi:IconLabel.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding PauseCommand}" CommandParameter="{Binding Id}"/>
+                                            </mi:IconLabel.GestureRecognizers>
+                                        </mi:IconLabel>
+
+                                        <mi:IconLabel 
+                                                IsVisible="{Binding IsPlay}"
+                                                Icon="ic_stop" 
+                                                FontSize="40" 
+                                                VerticalOptions="Center">
+                                            <mi:IconLabel.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding StopCommand}" CommandParameter="{Binding Id}"/>
+                                            </mi:IconLabel.GestureRecognizers>
+                                        </mi:IconLabel>
+
+                                        <Label
+                                               Text="{Binding PositionAtual}" 
+                                               Style="{StaticResource LabelDefault}" 
+                                               TextColor="{StaticResource GreyLiberi}"
+                                               LineBreakMode="NoWrap" 
+                                               Font="18" 
+                                               VerticalOptions="Center"/>
+
+                                    </StackLayout>
+                             
+                                
+                                </Grid>
+                            </ScrollView>
+
+                        </DataTemplate>
+
+                    </control:CarouselViewControl.ItemTemplate>
+                </control:CarouselViewControl>
+
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
+
+

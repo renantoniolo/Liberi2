@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+		<integer>2</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CFBundleDisplayName</key>
+	<string>Liberi</string>
+	<key>CFBundleIdentifier</key>
+	<string>com.intersaberes.Luxios</string>
+	<key>CFBundleVersion</key>
+	<string>1.0.20</string>
+	<key>CFBundleName</key>
+	<string>Liberi</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Montserrat-Regular.ttf</string>
+		<string>Montserrat-Italic.ttf</string>
+		<string>MaterialIcons-Regular.ttf</string>
+	</array>
+	<key>XSLaunchImageAssets</key>
+	<string>Assets.xcassets/LaunchImage.launchimage</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Esse aplicativo requer o uso da camera e seu album de fotos</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Esse aplicativo requer o uso das fotos do album</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Esse aplicativo requer o usuo do microfone</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>Esse aplicativo requer o uso das fotos da galeria</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>appcenter-a25d705f-e8a0-4913-b8c0-7e374edefb6a</string>
+			</array>
+		</dict>
+	</array>
+	<key>NSCalendarsUsageDescription</key>
+	<string>This app need to access your calendar events</string>
+	<key>AppCenterAppDelegateForwarderEnabled</key>
+	<string>0</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0.12</string>
+	<key>MinimumOSVersion</key>
+	<string>9.0</string>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>UIRequiresFullScreen</key>
+	<true/>
+</dict>
+</plist>

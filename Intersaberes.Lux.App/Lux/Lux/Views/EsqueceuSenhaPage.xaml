@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="Lux.Views.EsqueceuSenhaPage"
+             BackgroundImage="background_coruja_login">
+    
+    <ContentPage.Content>
+        
+       <Grid 
+            RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="80" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+           <Grid 
+                RowSpacing="0"
+                Grid.Row="0">
+               
+                <Image 
+                    Source="logo_liberi" 
+                    Margin="0,30,0,0"
+                    Aspect="AspectFit"
+                    VerticalOptions="Start" 
+                    HorizontalOptions="Center" />
+                
+            </Grid>
+
+            <StackLayout 
+                Grid.Row="1"
+                Spacing="0"
+                Padding="0,10,0,0"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Start"
+                Orientation="Vertical">
+
+                <Label 
+                    Text="Esqueceu sua senha?"
+                    TextColor="#FFF"
+                    FontSize="Medium"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource LabelDefault}" />
+                
+                <Label 
+                    Text="Enviaremos um e-mail com instruções para você criar uma senha nova."
+                    TextColor="#FFF"
+                    Margin="45,5,45,20"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    Style="{StaticResource LabelDefault}" />
+                
+                <StackLayout
+                    HorizontalOptions="FillAndExpand"
+                    VerticalOptions="Start"
+                    Margin="45,0,45,0"
+                    Padding="15"
+                    BackgroundColor="{StaticResource BackgroundColorLoginFrame}"
+                    Opacity="0.6">
+
+                    <Label 
+                        Text="E-MAIL:"
+                        TextColor="#FFF"
+                        Style="{StaticResource LabelDefault}" />
+
+                    <Entry 
+                        Placeholder="E-mail" 
+                        PlaceholderColor="Gray" 
+                        BackgroundColor="White"
+                        Keyboard="Email"
+                        TextColor="Gray"
+                        Text="{Binding InputEmail, Mode=TwoWay}" />
+
+                    <Button 
+                        HorizontalOptions="EndAndExpand"
+                        VerticalOptions="End"
+                        Text="OK"
+                        FontAttributes="Bold"
+                        WidthRequest="56"
+                        HeightRequest="48"
+                        Style="{StaticResource ButtonStyle}" 
+                        Command="{Binding OkCommand}" />
+
+
+                </StackLayout>
+
+            </StackLayout>
+            
+            <!-- voltar para o login -->
+            <StackLayout
+                Grid.Row="2"
+                HorizontalOptions="FillAndExpand"
+                VerticalOptions="Center"
+                Margin="45,15,45,10"
+                Padding="10"
+                BackgroundColor="{StaticResource GreenLiberi}"
+                Opacity="0.8">
+                <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding LoginCommand}" />
+                </StackLayout.GestureRecognizers>
+                
+                <Label
+                    Text="Login"
+                    TextColor="#FFF"
+                    HorizontalOptions="Center"
+                    HorizontalTextAlignment="Center"
+                    FontSize="Medium"
+                    Style="{StaticResource LabelDefault}" />
+                
+                
+            </StackLayout>
+
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

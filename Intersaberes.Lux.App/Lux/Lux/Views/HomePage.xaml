@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lux.Views.HomePage"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:local="clr-namespace:Lux.Helpers"
+             BackgroundColor="{StaticResource BackgroundColorViewPage}">
+
+     <ContentPage.ToolbarItems>
+
+        <ToolbarItem 
+            Name="toolSearch" 
+            Order="Primary" 
+            Icon="ic_searchGlobal" 
+            Text="Search" 
+            Priority="1"
+            Command="{Binding SearchGlobalCommand}"/>
+         
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImagemConverter x:Key="imagemSource"></local:ImagemConverter>
+            <local:PercentConverter x:Key="percent"></local:PercentConverter>
+            <local:DoubleToRattings x:Key="doubleTorattings"></local:DoubleToRattings>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ScrollView>
+
+        <Grid RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200" />
+                <RowDefinition Height="38" />
+                <RowDefinition Height="2*" />
+                <RowDefinition Height="180" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <!-- Livro Destaque -->
+            <Grid 
+                BackgroundColor="{StaticResource BackgroundColorLivroDestaque}"
+                Grid.Row="0" 
+                ColumnSpacing="0"
+                Padding="20,20,0,20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="180" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Imagem do livro -->
+                <ffimageloading:CachedImage 
+                    Grid.Column="0"
+                    VerticalOptions="FillAndExpand"
+                    HorizontalOptions="FillAndExpand"
+                    Source="{Binding livro0.Capa, Converter={StaticResource imagemSource}" 
+                    DownsampleToViewSize="true"
+                    CacheType="Memory"
+                    FadeAnimationEnabled="true"
+                    LoadingPlaceholder="bookLoading"
+                    ErrorPlaceholder="bookUnavailable" 
+                    Margin="0">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding DetalhesCommand}" CommandParameter="{Binding livro0}" />
+                            </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <StackLayout 
+                        Grid.Column="1"
+                        Padding="0,5,0,0"
+                        Orientation="Vertical">
+
+                    <StackLayout 
+                            Padding="10,5,40,5"
+                            BackgroundColor="{StaticResource GreyLiberi}">
+
+                        <Label 
+                            Style="{StaticResource LabelDefault}" 
+                            Margin="5,0,0,0"
+                            Text="{Binding TextDetalhe, Mode=TwoWay}"
+                            FontSize="Small"
+                            TextColor="#FFF">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding DetalhesCommand}" CommandParameter="{Binding livro0}" />
+                            </Label.GestureRecognizers>
+                        </Label>
+
+                    </StackLayout>
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Margin="10,0,40,0"
+                        Text="{Binding livro0.Titulo}"
+                        LineBreakMode="TailTruncation"
+                        HorizontalOptions="Start"
+                        HorizontalTextAlignment="Start"
+                        FontSize="Medium"
+                        TextColor="{StaticResource GreyLiberi}"/>
+
+                    <StackLayout 
+                        Spacing="0"
+                        Margin="10,0,40,0"
+                        HorizontalOptions="FillAndExpand"
+                        Orientation="Horizontal">
+
+                        <rating:SfRating 
+                            x:Name="rating1" ItemCount="5" HorizontalOptions="End" ReadOnly="True" 
+                            VerticalOptions="CenterAndExpand" Precision="Exact" ItemSize="12" Value="{Binding livro0.Avaliacao}"
+                            RatingSettings="{Binding livro0.Avaliacao, Converter={StaticResource doubleTorattings}">
+                            <rating:SfRating.RatingSettings>
+                                <rating:SfRatingSettings RatedFill="{StaticResource BackgroundColorSelect}" UnRatedFill="{StaticResource BackgroundColorDeselect}" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                            </rating:SfRating.RatingSettings>
+                        </rating:SfRating>
+
+                        <Label 
+                            Style="{StaticResource LabelDefault}"
+                            Text="{Binding livro0.Percentual, StringFormat='{0}%'}"
+                            VerticalOptions="EndAndExpand"
+                            VerticalTextAlignment="End"
+                            HorizontalOptions="EndAndExpand"
+                            HorizontalTextAlignment="End"
+                            FontSize="Small"
+                            TextColor="{StaticResource GreyLiberi}"/>
+
+                    </StackLayout>
+
+                    <local:CustomProgressBar Margin="10,0,40,0"  Progress="{Binding livro0.Percentual, Converter={StaticResource percent}" />
+
+                </StackLayout>
+            </Grid>
+
+            <!-- Barra cinza Biblioteca -->
+            <Grid 
+                Grid.Row="1" 
+                BackgroundColor="{StaticResource GreyLight}"
+                RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="40" />
+                    <ColumnDefinition Width="2*" />
+                    <ColumnDefinition Width="2*" />
+                </Grid.ColumnDefinitions>
+
+                <mi:IconLabel 
+                    Grid.Column="0"
+                    Icon="ic_account_balance" 
+                    FontSize="22"
+                    Margin="10,0,0,0"
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="End"
+                    TextColor="#2497A2" />
+                
+                <Label 
+                    Grid.Column="1"
+                    Style="{StaticResource LabelDefault}" 
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="CenterAndExpand"
+                    HorizontalOptions="Start"
+                    FontSize="Medium"
+                    Text="BIBLIOTECA" />
+
+                <Label 
+                        Grid.Column="2"
+                        Style="{StaticResource LabelDefault}" 
+                        VerticalTextAlignment="Center"
+                        VerticalOptions="CenterAndExpand"
+                        HorizontalOptions="Center"
+                        FontSize="Small"
+                        Text="Ver Todos" />
+
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding BibliotecaCommand}" />
+                </Grid.GestureRecognizers>
+            </Grid>
+
+            <!-- Outros 2 Livros não lidos -->
+            <Grid 
+                Grid.Row="2" 
+                ColumnSpacing="10"
+                Padding="20">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="60" />
+                    <RowDefinition Height="30" />
+                    <RowDefinition Height="10" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <!-- Livro Lido 01 -->
+                <ffimageloading:CachedImage 
+                    Grid.Column="0"
+                    HorizontalOptions="FillAndExpand"
+                    Source="{Binding livro1.Capa, Converter={StaticResource imagemSource}}" 
+                    DownsampleToViewSize="true"
+                    CacheType="Memory"
+                    FadeAnimationEnabled="true"
+                    LoadingPlaceholder="bookLoading"
+                    ErrorPlaceholder="bookUnavailable" 
+                    Margin="1">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DetalhesCommand}" CommandParameter="{Binding livro1}" />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+
+                <Grid 
+                    Grid.Column="0" 
+                    Grid.Row="1"
+                    Padding="10,0,10,0"
+                    ColumnSpacing="0"
+                    RowSpacing="0" >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="36" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                            Grid.Column="0" 
+                            Style="{StaticResource LabelDefault}"
+                            Margin="0"
+                            Text="{Binding livro1.Titulo}"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            FontSize="Small"
+                            TextColor="{StaticResource GreyLiberi}"/>
+                            
+                    <mi:IconLabel
+                            Grid.Column="1"
+                            FontSize="24"
+                            Margin="0"
+                            VerticalTextAlignment="Start"
+                            VerticalOptions="StartAndExpand"
+                            HorizontalOptions="End"
+                            Icon="ic_more_horiz"
+                            TextColor="{StaticResource GreenLiberi}" >
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DetalhesCommand}" CommandParameter="{Binding livro1}" />
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+                    
+                </Grid>
+
+                <StackLayout 
+                    Grid.Column="0" 
+                    Grid.Row="2"
+                    Spacing="0"
+                    Margin="10,0,10,0"
+                    Orientation="Horizontal">
+
+                    <rating:SfRating 
+                            x:Name="rating2" ItemCount="5" HorizontalOptions="End" ReadOnly="True"
+                            VerticalOptions="CenterAndExpand" Precision="Exact" ItemSize="12" Value="{Binding livro1.Avaliacao}"
+                            RatingSettings="{Binding livro1.Avaliacao, Converter={StaticResource doubleTorattings}">
+                            <rating:SfRating.RatingSettings>
+                                <rating:SfRatingSettings RatedFill="{StaticResource BackgroundColorSelect}" UnRatedFill="{StaticResource BackgroundColorDeselect}" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                            </rating:SfRating.RatingSettings>
+                    </rating:SfRating>
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Text="{Binding livro1.Percentual, StringFormat='{0}%'}"
+                        VerticalOptions="EndAndExpand"
+                        VerticalTextAlignment="End"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        FontSize="Small"
+                        TextColor="{StaticResource GreyLight}"/>
+
+                </StackLayout>
+
+                <local:CustomProgressBar
+                        Grid.Column="0" 
+                        Grid.Row="3" 
+                        Margin="10,0,10,0"
+                        Progress="{Binding livro1.Percentual, Converter={StaticResource percent}"/>
+
+                <!-- Livro Lido 02 -->
+                <ffimageloading:CachedImage 
+                    Grid.Column="1" 
+                    Grid.Row="0" 
+                    HorizontalOptions="FillAndExpand"
+                    Source="{Binding livro2.Capa, Converter={StaticResource imagemSource}" 
+                    DownsampleToViewSize="true"
+                    CacheType="Memory"
+                    FadeAnimationEnabled="true"
+                    LoadingPlaceholder="bookLoading"
+                    ErrorPlaceholder="bookUnavailable" 
+                    Margin="1">
+                    <ffimageloading:CachedImage.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding DetalhesCommand}" CommandParameter="{Binding livro2}" />
+                    </ffimageloading:CachedImage.GestureRecognizers>
+                </ffimageloading:CachedImage>
+
+                <Grid 
+                    Padding="10,0,10,0"
+                    ColumnSpacing="0"
+                    RowSpacing="0"
+                    Grid.Column="1" 
+                    Grid.Row="1" >
+
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="36" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label 
+                            Grid.Column="0" 
+                            Style="{StaticResource LabelDefault}"
+                            Margin="0"
+                            Text="{Binding livro2.Titulo}"
+                            HorizontalOptions="Start"
+                            HorizontalTextAlignment="Start"
+                            FontSize="Small"
+                            TextColor="{StaticResource GreyLiberi}"/>
+                            
+                    <mi:IconLabel
+                            Grid.Column="1"
+                            FontSize="24"
+                            Margin="0"
+                            VerticalTextAlignment="Start"
+                            VerticalOptions="StartAndExpand"
+                            HorizontalOptions="End"
+                            Icon="ic_more_horiz"
+                            TextColor="{StaticResource GreenLiberi}" >
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding DetalhesCommand}" CommandParameter="{Binding livro2}" />
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+                    
+                </Grid>
+
+                <StackLayout 
+                    Grid.Column="1" 
+                    Grid.Row="2"
+                    Spacing="0"
+                    Margin="10,0,10,0"
+                    Orientation="Horizontal">
+                    
+                    
+                    <rating:SfRating 
+                        x:Name="rating3" ItemCount="5" HorizontalOptions="End" ReadOnly="True"
+                        VerticalOptions="CenterAndExpand" Precision="Exact" ItemSize="12" Value="{Binding livro2.Avaliacao}"
+                        RatingSettings="{Binding livro2.Avaliacao, Converter={StaticResource doubleTorattings}">
+                        <rating:SfRating.RatingSettings>
+                            <rating:SfRatingSettings RatedFill="{StaticResource BackgroundColorSelect}" UnRatedFill="{StaticResource BackgroundColorDeselect}" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                        </rating:SfRating.RatingSettings>
+                    </rating:SfRating>
+
+                    <Label 
+                        Style="{StaticResource LabelDefault}"
+                        Text="{Binding livro2.Percentual, StringFormat='{0}%'}"
+                        VerticalOptions="EndAndExpand"
+                        VerticalTextAlignment="End"
+                        HorizontalOptions="EndAndExpand"
+                        HorizontalTextAlignment="End"
+                        FontSize="Small"
+                        TextColor="{StaticResource GreyLight}"/>
+
+                </StackLayout>
+
+                <local:CustomProgressBar
+                        Grid.Column="1" 
+                        Grid.Row="3" 
+                        Margin="10,0,10,0"
+                        Progress="{Binding livro2.Percentual, Converter={StaticResource percent}" />
+
+            </Grid>
+
+            <!-- Rodapé Loja InterSaberes -->
+            <Image 
+                Grid.Row="3"
+                Source="bg_bannerstore_coruja" 
+                Aspect="AspectFill">
+            </Image>
+
+            <Label 
+                Grid.Row="3" 
+                Margin="20,20,20,0"
+                Style="{StaticResource LabelBannerLoja}"
+                Text="O Liberi é a escolha de quem está em constante movimento." 
+                WidthRequest="200"
+                HeightRequest="90"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="StartAndExpand"
+                HorizontalTextAlignment="End"
+                VerticalTextAlignment="Start"/>
+
+            <mi:IconLabel
+                Grid.Row="3" 
+                FontSize="28"
+                Margin="10,95,30,5"
+                VerticalTextAlignment="Start"
+                VerticalOptions="StartAndExpand"
+                HorizontalOptions="EndAndExpand"
+                HorizontalTextAlignment="End"
+                Icon="ic_account_balance" 
+                TextColor="#FFF" />
+
+        </Grid>
+    </ScrollView> 
+</ContentPage>

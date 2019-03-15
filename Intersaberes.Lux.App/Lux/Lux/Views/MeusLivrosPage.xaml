@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lux.Views.MeusLivrosPage" 
+             xmlns:local="clr-namespace:Lux.Helpers"
+             xmlns:flv="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.FlowListView"
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             xmlns:controls="clr-namespace:Lux.Controls;" 
+             BackgroundColor="{StaticResource BackgroundColorViewPage}">
+
+    <ContentPage.ToolbarItems>
+
+        <ToolbarItem 
+            Name="toolSearch" 
+            Order="Primary" 
+            Icon="ic_list_grid" 
+            Text="Grid" 
+            Priority="1"
+            Command="{Binding ViewBooksGridCommand}"/>
+
+        <ToolbarItem 
+            Order="Primary" 
+            Icon="ic_list_book" 
+            Text="Lista" 
+            Priority="0"
+            Command="{Binding ViewBooksListCommand}"/>
+
+    </ContentPage.ToolbarItems>
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ImagemConverter x:Key="imagemSource"></local:ImagemConverter>
+            <local:PercentConverter x:Key="percent"></local:PercentConverter>
+            <local:DoubleToRattings x:Key="doubleTorattings"></local:DoubleToRattings>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Grid 
+        ColumnSpacing="0"
+        RowSpacing="0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition Height="40" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+
+        <StackLayout 
+            Grid.Row="0"
+            Spacing="0"
+            BackgroundColor="{StaticResource GreyLight}"
+            Orientation="Horizontal">
+
+            <mi:IconLabel 
+                Icon="ic_book" 
+                FontSize="26" 
+                Margin="0"
+                VerticalTextAlignment="Center"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="End"
+                HorizontalOptions="EndAndExpand"
+                TextColor="#2497A2" />
+
+            <Label
+                Text="MEUS LIVROS"
+                Margin="5,0,0,0"
+                Style="{StaticResource LabelDefault}" 
+                FontSize="Medium" 
+                VerticalTextAlignment="Center"
+                VerticalOptions="Center"
+                HorizontalTextAlignment="Start"
+                HorizontalOptions="StartAndExpand" />
+
+        </StackLayout>
+
+        <SearchBar 
+            Grid.Row="1"
+            BackgroundColor="{StaticResource BackgroundColorViewPage}"
+            x:Name="search"
+            SearchCommand="{Binding SearchCommand}"
+            SearchCommandParameter="{Binding Text, Source={x:Reference search}}"
+            Placeholder="Pesquisar..." 
+            TextChanged="SearchBar_OnTextChanged" 
+            FontSize="Small" />
+
+        <ListView 
+                Grid.Row="2"
+                IsVisible="{Binding IsViewList}"
+                x:Name="ItemsListView"
+                SeparatorVisibility="Default"
+                ItemsSource="{Binding Items}"
+                VerticalOptions="FillAndExpand"
+                HasUnevenRows="true"
+                RefreshCommand="{Binding LoadItemsCommand}"
+                IsPullToRefreshEnabled="true"
+                IsRefreshing="{Binding IsBusy, Mode=OneWay}"
+                CachingStrategy="RecycleElement"
+                SelectedItem="{Binding ItemtSelecionado, Mode=TwoWay}" >
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+
+                    <ViewCell Height="210">
+
+                        <StackLayout
+                            Padding="10"
+                            Orientation="Vertical" >
+
+                            <Grid
+                                ColumnSpacing="5"
+                                RowSpacing="0">
+
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="*" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="2*" />
+                                </Grid.ColumnDefinitions>
+
+                                <!-- Imagem do livro -->
+                                <ffimageloading:CachedImage 
+                                    Grid.Column="0"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="{Binding Capa, Converter={StaticResource imagemSource}" 
+                                    DownsampleToViewSize="true"
+                                    CacheType="Memory"
+                                    FadeAnimationEnabled="true"
+                                    LoadingPlaceholder="bookLoading"
+                                    ErrorPlaceholder="bookUnavailable" 
+                                    Margin="5,5,0,0" />
+                              
+                                
+                                <!-- Detalhes do livro -->
+                                <StackLayout
+                                    Grid.Column="1"
+                                    Orientation="Vertical">
+
+                                    <Label 
+                                        Text="{Binding Titulo}" 
+                                        Style="{StaticResource LabelDefault}"
+                                        TextColor="{StaticResource GreyLiberi}"
+                                        LineBreakMode="NoWrap"
+                                        FontSize="Small"/>
+
+                                    <Label 
+                                        Text="{Binding Autor, StringFormat='Autor: {0}'}}" 
+                                        Style="{StaticResource LabelDefault }"
+                                        TextColor="{StaticResource GreyLiberi}"
+                                        FontSize="Micro"/>
+
+
+                                    <Label 
+                                        HeightRequest="90"
+                                        Text="{Binding Sinopse}" 
+                                        LineBreakMode="WordWrap"
+                                        Style="{StaticResource LabelDefault }"
+                                        TextColor="{StaticResource GreyLiberi}"
+                                        FontSize="Micro"
+                                        Margin="0,5,0,0"/>
+
+                                    <mi:IconLabel 
+                                        Icon="ic_more_horiz" 
+                                        FontSize="24" 
+                                        Margin="0"
+                                        TextColor="{StaticResource GreenLiberi}">
+                                        <mi:IconLabel.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding Command}" />
+                                        </mi:IconLabel.GestureRecognizers>
+                                    </mi:IconLabel>
+
+                                </StackLayout>
+
+                            </Grid>
+
+                            <Label 
+                                Style="{StaticResource LabelDefault}"
+                                Margin="5,0,5,0"
+                                Text="{Binding Percentual, StringFormat='{0}%'}"
+                                VerticalOptions="EndAndExpand"
+                                VerticalTextAlignment="End"
+                                HorizontalOptions="EndAndExpand"
+                                HorizontalTextAlignment="End"
+                                FontSize="Small"
+                                TextColor="{StaticResource GreyLight}"/>
+
+                            <local:CustomProgressBar 
+                                VerticalOptions="Start"
+                                 Margin="5,0,5,0"  
+                                 Progress="{Binding Percentual, Converter={StaticResource percent}" />
+
+                        </StackLayout>
+
+                    </ViewCell>
+
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <flv:FlowListView
+                Grid.Row="2" 
+                IsVisible="{Binding IsViewGrid}" 
+                FlowColumnCount="2" 
+                SeparatorVisibility="None" 
+                HasUnevenRows="true"
+                VerticalOptions="FillAndExpand"
+                FlowItemsSource="{Binding Items}"
+                FlowItemTappedCommand="{Binding ItemTappedCommand}" >
+
+            <flv:FlowListView.FlowColumnTemplate>
+                <DataTemplate>
+
+                    <StackLayout
+                            HeightRequest="310"
+                            Padding="5"
+                            Orientation="Vertical" >
+                        
+                                <!-- Imagem do livro -->
+                                <ffimageloading:CachedImage 
+                                    Grid.Column="0"
+                                    VerticalOptions="FillAndExpand"
+                                    HorizontalOptions="FillAndExpand"
+                                    Source="{Binding Capa, Converter={StaticResource imagemSource}" 
+                                    DownsampleToViewSize="true"
+                                    CacheType="Memory"
+                                    LoadingPlaceholder="bookLoading"
+                                    ErrorPlaceholder="bookUnavailable" 
+                                    Margin="5,5,0,0"/>
+
+                                <StackLayout Padding="5,0,5,0" >
+
+                                    <Label 
+                                        Text="{Binding Titulo}" 
+                                        Style="{StaticResource LabelDefault }"
+                                        TextColor="{StaticResource GreyLiberi}"
+                                        LineBreakMode="MiddleTruncation"
+                                        FontSize="Small"/>
+                                    
+                            <StackLayout Orientation="Horizontal">
+
+                                <rating:SfRating 
+                                    x:Name="rating" ItemCount="5" HorizontalOptions="End" ReadOnly="True"
+                                    VerticalOptions="CenterAndExpand" Precision="Exact" ItemSize="15" Value="{Binding Avaliacao}"
+                                    RatingSettings="{Binding Avaliacao, Converter={StaticResource doubleTorattings}">
+                                    <rating:SfRating.RatingSettings>
+                                        <rating:SfRatingSettings RatedFill="{StaticResource BackgroundColorSelect}" UnRatedFill="{StaticResource BackgroundColorDeselect}" RatedStrokeWidth="0" UnRatedStrokeWidth="0" />
+                                    </rating:SfRating.RatingSettings>
+                                </rating:SfRating>
+
+                                <Label 
+                                     Style="{StaticResource LabelDefault}"
+                                     Margin="5,0,5,0"
+                                     Text="{Binding Percentual, StringFormat='{0}%'}"
+                                     VerticalOptions="EndAndExpand"
+                                     VerticalTextAlignment="End"
+                                     HorizontalOptions="EndAndExpand"
+                                     HorizontalTextAlignment="End"
+                                     FontSize="Small"
+                                     TextColor="{StaticResource GreyLight}"/>
+
+                            </StackLayout>
+
+                            <local:CustomProgressBar 
+                                    VerticalOptions="Start"
+                                    Margin="5,0,5,0"  
+                                    Progress="{Binding Percentual, Converter={StaticResource percent}" />
+
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </DataTemplate>
+            </flv:FlowListView.FlowColumnTemplate>
+
+        </flv:FlowListView>
+
+    </Grid>
+
+</ContentPage>
+

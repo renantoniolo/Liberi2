@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"   
+     x:Class="Lux.Views.Animation.LoadAnimationIntersaberes">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <StackLayout 
+        Spacing="10" 
+        Padding="10"  
+        Orientation="Horizontal" 
+        VerticalOptions="CenterAndExpand" 
+        HorizontalOptions="CenterAndExpand">
+
+        <Frame 
+            Opacity="0.8"
+            CornerRadius="20"
+            HasShadow="true"
+            BackgroundColor="{StaticResource GreenLiberi}"
+            WidthRequest="80" 
+            HeightRequest="125"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="CenterAndExpand">
+           
+            <StackLayout  Orientation="Vertical">
+                
+                <Image 
+                    x:Name="image" 
+                    HorizontalOptions="CenterAndExpand"
+                    VerticalOptions="CenterAndExpand" />
+                
+                <Label 
+                    Text="Carregando..." 
+                    HorizontalTextAlignment="Center"
+                    FontSize="Micro"
+                    TextColor="#FFF" 
+                    Style="{StaticResource LabelDefault}" />
+                
+            </StackLayout>
+
+        </Frame>
+        
+    </StackLayout>
+    
+</pages:PopupPage>

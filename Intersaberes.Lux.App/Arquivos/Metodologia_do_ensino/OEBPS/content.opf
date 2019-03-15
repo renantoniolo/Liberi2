@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<package xmlns="http://www.idpf.org/2007/opf" unique-identifier="BookID" version="2.0">
+    <metadata xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:opf="http://www.idpf.org/2007/opf">
+        <dc:title>Metodologia do ensino</dc:title>
+	<dc:language>pt-BR</dc:language>
+        <dc:rights>Todos os direitos reservados a Sextante</dc:rights>
+        <dc:creator opf:role="aut">BrunoWill</dc:creator>
+        <dc:publisher>Sextante</dc:publisher>
+        <dc:identifier id="BookID" opf:scheme="UUID">1231231231231</dc:identifier>
+		<meta name="Sigil version" content="0.2.4"/>
+    </metadata>
+    <manifest>
+		<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"></item>
+		<item id="page-template.xpgt" href="Styles/page-template.xpgt" media-type="application/vnd.adobe-page-template+xml"></item>
+        <item id="capa" href="Content/capa.xhtml" media-type="application/xhtml+xml"/>
+<item id="sumario" href="Content/sumario.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo1" href="Content/capitulo1.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo2" href="Content/capitulo2.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo3" href="Content/capitulo3.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo4" href="Content/capitulo4.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo5" href="Content/capitulo5.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo6" href="Content/capitulo6.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo7" href="Content/capitulo7.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo8" href="Content/capitulo8.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo9" href="Content/capitulo9.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo10" href="Content/capitulo10.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo11" href="Content/capitulo11.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo12" href="Content/capitulo12.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo13" href="Content/capitulo13.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo14" href="Content/capitulo14.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo15" href="Content/capitulo15.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo16" href="Content/capitulo16.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo17" href="Content/capitulo17.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo18" href="Content/capitulo18.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo19" href="Content/capitulo19.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo20" href="Content/capitulo20.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo21" href="Content/capitulo21.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo22" href="Content/capitulo22.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo23" href="Content/capitulo23.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo24" href="Content/capitulo24.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo25" href="Content/capitulo25.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo26" href="Content/capitulo26.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo27" href="Content/capitulo27.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo28" href="Content/capitulo28.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo29" href="Content/capitulo29.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo30" href="Content/capitulo30.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo31" href="Content/capitulo31.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo32" href="Content/capitulo32.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo33" href="Content/capitulo33.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo34" href="Content/capitulo34.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo35" href="Content/capitulo35.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo36" href="Content/capitulo36.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo37" href="Content/capitulo37.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo38" href="Content/capitulo38.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo39" href="Content/capitulo39.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo40" href="Content/capitulo40.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo41" href="Content/capitulo41.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo42" href="Content/capitulo42.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo43" href="Content/capitulo43.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo44" href="Content/capitulo44.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo45" href="Content/capitulo45.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo46" href="Content/capitulo46.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo47" href="Content/capitulo47.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo48" href="Content/capitulo48.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo49" href="Content/capitulo49.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo50" href="Content/capitulo50.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo51" href="Content/capitulo51.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo52" href="Content/capitulo52.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo53" href="Content/capitulo53.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo54" href="Content/capitulo54.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo55" href="Content/capitulo55.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo56" href="Content/capitulo56.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo57" href="Content/capitulo57.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo58" href="Content/capitulo58.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo59" href="Content/capitulo59.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo60" href="Content/capitulo60.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo61" href="Content/capitulo61.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo62" href="Content/capitulo62.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo63" href="Content/capitulo63.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo64" href="Content/capitulo64.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo65" href="Content/capitulo65.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo66" href="Content/capitulo66.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo67" href="Content/capitulo67.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo68" href="Content/capitulo68.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo69" href="Content/capitulo69.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo70" href="Content/capitulo70.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo71" href="Content/capitulo71.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo72" href="Content/capitulo72.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo73" href="Content/capitulo73.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo74" href="Content/capitulo74.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo75" href="Content/capitulo75.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo76" href="Content/capitulo76.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo77" href="Content/capitulo77.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo78" href="Content/capitulo78.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo79" href="Content/capitulo79.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo80" href="Content/capitulo80.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo81" href="Content/capitulo81.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo82" href="Content/capitulo82.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo83" href="Content/capitulo83.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo84" href="Content/capitulo84.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo85" href="Content/capitulo85.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo86" href="Content/capitulo86.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo87" href="Content/capitulo87.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo88" href="Content/capitulo88.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo89" href="Content/capitulo89.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo90" href="Content/capitulo90.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo91" href="Content/capitulo91.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo92" href="Content/capitulo92.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo93" href="Content/capitulo93.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo94" href="Content/capitulo94.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo95" href="Content/capitulo95.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo96" href="Content/capitulo96.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo97" href="Content/capitulo97.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo98" href="Content/capitulo98.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo99" href="Content/capitulo99.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo100" href="Content/capitulo100.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo101" href="Content/capitulo101.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo102" href="Content/capitulo102.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo103" href="Content/capitulo103.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo104" href="Content/capitulo104.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo105" href="Content/capitulo105.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo106" href="Content/capitulo106.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo107" href="Content/capitulo107.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo108" href="Content/capitulo108.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo109" href="Content/capitulo109.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo110" href="Content/capitulo110.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo111" href="Content/capitulo111.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo112" href="Content/capitulo112.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo113" href="Content/capitulo113.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo114" href="Content/capitulo114.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo115" href="Content/capitulo115.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo116" href="Content/capitulo116.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo117" href="Content/capitulo117.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo118" href="Content/capitulo118.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo119" href="Content/capitulo119.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo120" href="Content/capitulo120.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo121" href="Content/capitulo121.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo122" href="Content/capitulo122.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo123" href="Content/capitulo123.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo124" href="Content/capitulo124.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo125" href="Content/capitulo125.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo126" href="Content/capitulo126.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo127" href="Content/capitulo127.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo128" href="Content/capitulo128.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo129" href="Content/capitulo129.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo130" href="Content/capitulo130.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo131" href="Content/capitulo131.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo132" href="Content/capitulo132.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo133" href="Content/capitulo133.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo134" href="Content/capitulo134.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo135" href="Content/capitulo135.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo136" href="Content/capitulo136.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo137" href="Content/capitulo137.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo138" href="Content/capitulo138.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo139" href="Content/capitulo139.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo140" href="Content/capitulo140.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo141" href="Content/capitulo141.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo142" href="Content/capitulo142.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo143" href="Content/capitulo143.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo144" href="Content/capitulo144.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo145" href="Content/capitulo145.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo146" href="Content/capitulo146.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo147" href="Content/capitulo147.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo148" href="Content/capitulo148.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo149" href="Content/capitulo149.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo150" href="Content/capitulo150.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo151" href="Content/capitulo151.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo152" href="Content/capitulo152.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo153" href="Content/capitulo153.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo154" href="Content/capitulo154.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo155" href="Content/capitulo155.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo156" href="Content/capitulo156.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo157" href="Content/capitulo157.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo158" href="Content/capitulo158.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo159" href="Content/capitulo159.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo160" href="Content/capitulo160.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo161" href="Content/capitulo161.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo162" href="Content/capitulo162.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo163" href="Content/capitulo163.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo164" href="Content/capitulo164.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo165" href="Content/capitulo165.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo166" href="Content/capitulo166.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo167" href="Content/capitulo167.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo168" href="Content/capitulo168.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo169" href="Content/capitulo169.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo170" href="Content/capitulo170.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo171" href="Content/capitulo171.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo172" href="Content/capitulo172.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo173" href="Content/capitulo173.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo174" href="Content/capitulo174.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo175" href="Content/capitulo175.xhtml" media-type="application/xhtml+xml"/>
+<item id="capitulo176" href="Content/capitulo176.xhtml" media-type="application/xhtml+xml"/>
+<item id="stylesheet" href="Styles/stylesheet.css" media-type="text/css"/>
+<item id="custom-css" href="Styles/custom-css.css" media-type="text/css"/>
+
+    </manifest>
+    <spine toc="ncx">
+        <itemref idref="capa"/>
+<itemref idref="sumario"/>
+<itemref idref="capitulo1"/>
+<itemref idref="capitulo2"/>
+<itemref idref="capitulo3"/>
+<itemref idref="capitulo4"/>
+<itemref idref="capitulo5"/>
+<itemref idref="capitulo6"/>
+<itemref idref="capitulo7"/>
+<itemref idref="capitulo8"/>
+<itemref idref="capitulo9"/>
+<itemref idref="capitulo10"/>
+<itemref idref="capitulo11"/>
+<itemref idref="capitulo12"/>
+<itemref idref="capitulo13"/>
+<itemref idref="capitulo14"/>
+<itemref idref="capitulo15"/>
+<itemref idref="capitulo16"/>
+<itemref idref="capitulo17"/>
+<itemref idref="capitulo18"/>
+<itemref idref="capitulo19"/>
+<itemref idref="capitulo20"/>
+<itemref idref="capitulo21"/>
+<itemref idref="capitulo22"/>
+<itemref idref="capitulo23"/>
+<itemref idref="capitulo24"/>
+<itemref idref="capitulo25"/>
+<itemref idref="capitulo26"/>
+<itemref idref="capitulo27"/>
+<itemref idref="capitulo28"/>
+<itemref idref="capitulo29"/>
+<itemref idref="capitulo30"/>
+<itemref idref="capitulo31"/>
+<itemref idref="capitulo32"/>
+<itemref idref="capitulo33"/>
+<itemref idref="capitulo34"/>
+<itemref idref="capitulo35"/>
+<itemref idref="capitulo36"/>
+<itemref idref="capitulo37"/>
+<itemref idref="capitulo38"/>
+<itemref idref="capitulo39"/>
+<itemref idref="capitulo40"/>
+<itemref idref="capitulo41"/>
+<itemref idref="capitulo42"/>
+<itemref idref="capitulo43"/>
+<itemref idref="capitulo44"/>
+<itemref idref="capitulo45"/>
+<itemref idref="capitulo46"/>
+<itemref idref="capitulo47"/>
+<itemref idref="capitulo48"/>
+<itemref idref="capitulo49"/>
+<itemref idref="capitulo50"/>
+<itemref idref="capitulo51"/>
+<itemref idref="capitulo52"/>
+<itemref idref="capitulo53"/>
+<itemref idref="capitulo54"/>
+<itemref idref="capitulo55"/>
+<itemref idref="capitulo56"/>
+<itemref idref="capitulo57"/>
+<itemref idref="capitulo58"/>
+<itemref idref="capitulo59"/>
+<itemref idref="capitulo60"/>
+<itemref idref="capitulo61"/>
+<itemref idref="capitulo62"/>
+<itemref idref="capitulo63"/>
+<itemref idref="capitulo64"/>
+<itemref idref="capitulo65"/>
+<itemref idref="capitulo66"/>
+<itemref idref="capitulo67"/>
+<itemref idref="capitulo68"/>
+<itemref idref="capitulo69"/>
+<itemref idref="capitulo70"/>
+<itemref idref="capitulo71"/>
+<itemref idref="capitulo72"/>
+<itemref idref="capitulo73"/>
+<itemref idref="capitulo74"/>
+<itemref idref="capitulo75"/>
+<itemref idref="capitulo76"/>
+<itemref idref="capitulo77"/>
+<itemref idref="capitulo78"/>
+<itemref idref="capitulo79"/>
+<itemref idref="capitulo80"/>
+<itemref idref="capitulo81"/>
+<itemref idref="capitulo82"/>
+<itemref idref="capitulo83"/>
+<itemref idref="capitulo84"/>
+<itemref idref="capitulo85"/>
+<itemref idref="capitulo86"/>
+<itemref idref="capitulo87"/>
+<itemref idref="capitulo88"/>
+<itemref idref="capitulo89"/>
+<itemref idref="capitulo90"/>
+<itemref idref="capitulo91"/>
+<itemref idref="capitulo92"/>
+<itemref idref="capitulo93"/>
+<itemref idref="capitulo94"/>
+<itemref idref="capitulo95"/>
+<itemref idref="capitulo96"/>
+<itemref idref="capitulo97"/>
+<itemref idref="capitulo98"/>
+<itemref idref="capitulo99"/>
+<itemref idref="capitulo100"/>
+<itemref idref="capitulo101"/>
+<itemref idref="capitulo102"/>
+<itemref idref="capitulo103"/>
+<itemref idref="capitulo104"/>
+<itemref idref="capitulo105"/>
+<itemref idref="capitulo106"/>
+<itemref idref="capitulo107"/>
+<itemref idref="capitulo108"/>
+<itemref idref="capitulo109"/>
+<itemref idref="capitulo110"/>
+<itemref idref="capitulo111"/>
+<itemref idref="capitulo112"/>
+<itemref idref="capitulo113"/>
+<itemref idref="capitulo114"/>
+<itemref idref="capitulo115"/>
+<itemref idref="capitulo116"/>
+<itemref idref="capitulo117"/>
+<itemref idref="capitulo118"/>
+<itemref idref="capitulo119"/>
+<itemref idref="capitulo120"/>
+<itemref idref="capitulo121"/>
+<itemref idref="capitulo122"/>
+<itemref idref="capitulo123"/>
+<itemref idref="capitulo124"/>
+<itemref idref="capitulo125"/>
+<itemref idref="capitulo126"/>
+<itemref idref="capitulo127"/>
+<itemref idref="capitulo128"/>
+<itemref idref="capitulo129"/>
+<itemref idref="capitulo130"/>
+<itemref idref="capitulo131"/>
+<itemref idref="capitulo132"/>
+<itemref idref="capitulo133"/>
+<itemref idref="capitulo134"/>
+<itemref idref="capitulo135"/>
+<itemref idref="capitulo136"/>
+<itemref idref="capitulo137"/>
+<itemref idref="capitulo138"/>
+<itemref idref="capitulo139"/>
+<itemref idref="capitulo140"/>
+<itemref idref="capitulo141"/>
+<itemref idref="capitulo142"/>
+<itemref idref="capitulo143"/>
+<itemref idref="capitulo144"/>
+<itemref idref="capitulo145"/>
+<itemref idref="capitulo146"/>
+<itemref idref="capitulo147"/>
+<itemref idref="capitulo148"/>
+<itemref idref="capitulo149"/>
+<itemref idref="capitulo150"/>
+<itemref idref="capitulo151"/>
+<itemref idref="capitulo152"/>
+<itemref idref="capitulo153"/>
+<itemref idref="capitulo154"/>
+<itemref idref="capitulo155"/>
+<itemref idref="capitulo156"/>
+<itemref idref="capitulo157"/>
+<itemref idref="capitulo158"/>
+<itemref idref="capitulo159"/>
+<itemref idref="capitulo160"/>
+<itemref idref="capitulo161"/>
+<itemref idref="capitulo162"/>
+<itemref idref="capitulo163"/>
+<itemref idref="capitulo164"/>
+<itemref idref="capitulo165"/>
+<itemref idref="capitulo166"/>
+<itemref idref="capitulo167"/>
+<itemref idref="capitulo168"/>
+<itemref idref="capitulo169"/>
+<itemref idref="capitulo170"/>
+<itemref idref="capitulo171"/>
+<itemref idref="capitulo172"/>
+<itemref idref="capitulo173"/>
+<itemref idref="capitulo174"/>
+<itemref idref="capitulo175"/>
+<itemref idref="capitulo176"/>
+
+    </spine>
+</package>

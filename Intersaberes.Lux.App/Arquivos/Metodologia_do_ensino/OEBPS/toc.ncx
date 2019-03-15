@@ -1,0 +1,908 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE ncx PUBLIC "-//NISO//DTD ncx 2005-1//EN"
+   "http://www.daisy.org/z3986/2005/ncx-2005-1.dtd">
+
+<ncx xmlns="http://www.daisy.org/z3986/2005/ncx/" version="2005-1">
+    <head>
+        <meta name="dtb:uid" content="1231231231231"/>
+        <meta name="dtb:depth" content="2"/>
+        <meta name="dtb:totalPageCount" content="0"/>
+        <meta name="dtb:maxPageNumber" content="0"/>
+    </head>
+    <docTitle>
+        <text>Metodologia do ensino</text>
+    </docTitle>
+    <navMap>
+        <navPoint id='navPoint-1' playOrder='1'>
+                                        <navLabel>
+                                            <text>capa</text>
+                                        </navLabel>
+                                        <content src='Content/capa.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-2' playOrder='2'>
+                                        <navLabel>
+                                            <text>Sumário</text>
+                                        </navLabel>
+                                        <content src='Content/sumario.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-3' playOrder='3'>
+                                        <navLabel>
+                                            <text>capitulo1</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo1.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-4' playOrder='4'>
+                                        <navLabel>
+                                            <text>Ateliê de artes visuais: pintura</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo2.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-5' playOrder='5'>
+                                        <navLabel>
+                                            <text>Agradecimentos</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo3.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-6' playOrder='6'>
+                                        <navLabel>
+                                            <text>Apresentação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo4.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-7' playOrder='7'>
+                                        <navLabel>
+                                            <text>Organização didático-pedagógica</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo5.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-8' playOrder='8'>
+                                        <navLabel>
+                                            <text>Introdução: fundamentos e conceitos</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo6.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-9' playOrder='9'>
+                                        <navLabel>
+                                            <text>Primeiras pinceladas: um passeio pela história</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo7.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-10' playOrder='10'>
+                                        <navLabel>
+                                            <text>1.1 A pintura e o divino</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo8.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-11' playOrder='11'>
+                                        <navLabel>
+                                            <text>1.2 Pintura e ciência</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo9.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-12' playOrder='12'>
+                                        <navLabel>
+                                            <text>Figura 1.4 – Santa ceia, de Leonardo da Vinci </text>
+                                        </navLabel>
+                                        <content src='Content/capitulo10.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-13' playOrder='13'>
+                                        <navLabel>
+                                            <text>1.3 Pintura e propaganda</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo11.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-14' playOrder='14'>
+                                        <navLabel>
+                                            <text>Figura 1.9 – Um: número 31, 1950, de Jackson Pollock</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo12.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-15' playOrder='15'>
+                                        <navLabel>
+                                            <text>Figura 1.10 – Whaam!, de Roy Lichtenstein</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo13.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-16' playOrder='16'>
+                                        <navLabel>
+                                            <text>1.4 Pintura e subjetividade</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo14.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-17' playOrder='17'>
+                                        <navLabel>
+                                            <text>1.5 Pintura e experiência</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo15.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-18' playOrder='18'>
+                                        <navLabel>
+                                            <text>Síntese</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo16.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-19' playOrder='19'>
+                                        <navLabel>
+                                            <text>Indicações culturais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo17.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-20' playOrder='20'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo18.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-21' playOrder='21'>
+                                        <navLabel>
+                                            <text>Atividades de aprendizagem</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo19.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-22' playOrder='22'>
+                                        <navLabel>
+                                            <text>capitulo20</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo20.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-23' playOrder='23'>
+                                        <navLabel>
+                                            <text>Atividades aplicadas: prática</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo21.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-24' playOrder='24'>
+                                        <navLabel>
+                                            <text>Figura 1.1 – Pintura egípcia</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo22.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-25' playOrder='25'>
+                                        <navLabel>
+                                            <text>Figura 1.2 – Cristo lavando os pés dos apóstolos, artista desconhecido</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo23.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-26' playOrder='26'>
+                                        <navLabel>
+                                            <text>Figura 1.3 – Quadrado preto suprematista ou quadrado negro sobre fundo branco, de Kazimir Malevich</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo24.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-27' playOrder='27'>
+                                        <navLabel>
+                                            <text>Figura 1.5 – Mona Lisa (La Joconde). de Leonardo da Vinci</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo25.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-28' playOrder='28'>
+                                        <navLabel>
+                                            <text>Figura 1.6 – Nascer do sol, de Claude Monet</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo26.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-29' playOrder='29'>
+                                        <navLabel>
+                                            <text>Figura 1.7 – Garotos na ladeira (dos Tabajaras), de Eliseu Visconti</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo27.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-30' playOrder='30'>
+                                        <navLabel>
+                                            <text>Figura 1.8 – Les demoiselles d’Avignon (As moças de Avignon), de Pablo Picasso</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo28.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-31' playOrder='31'>
+                                        <navLabel>
+                                            <text>Figura 1.11 – Marilyn Diptych, de Andy Warhol</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo29.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-32' playOrder='32'>
+                                        <navLabel>
+                                            <text>Figura 1.12 – O grito, de Edvard Munch</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo30.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-33' playOrder='33'>
+                                        <navLabel>
+                                            <text>Figura 1.13 – Os pensamentos do coração, de José Leonilson</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo31.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-34' playOrder='34'>
+                                        <navLabel>
+                                            <text>Figura 1.14 – A persistência da memória, de Salvador Dalí</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo32.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-35' playOrder='35'>
+                                        <navLabel>
+                                            <text>Figura 1.15 – L’Oeil cacodylate (Olho de cacodilato), de Francis Picabia</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo33.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-36' playOrder='36'>
+                                        <navLabel>
+                                            <text>Figura 1.16 – Vega III, de Victor Vasarely</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo34.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-37' playOrder='37'>
+                                        <navLabel>
+                                            <text>Um olhar para a tradição: os gêneros pictóricos</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo35.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-38' playOrder='38'>
+                                        <navLabel>
+                                            <text>2.1 Natureza-morta</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo36.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-39' playOrder='39'>
+                                        <navLabel>
+                                            <text>Figura 2.1 – Natureza-morta, de Pieter Claesz</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo37.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-40' playOrder='40'>
+                                        <navLabel>
+                                            <text>2.2 Interiores</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo38.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-41' playOrder='41'>
+                                        <navLabel>
+                                            <text>2.3 Paisagem</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo39.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-42' playOrder='42'>
+                                        <navLabel>
+                                            <text>2.4 Figura humana</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo40.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-43' playOrder='43'>
+                                        <navLabel>
+                                            <text>2.5 Pintura histórica</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo41.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-44' playOrder='44'>
+                                        <navLabel>
+                                            <text>Figura 2.17 – Independência ou morte, de Pedro Américo</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo42.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-45' playOrder='45'>
+                                        <navLabel>
+                                            <text>Síntese</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo43.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-46' playOrder='46'>
+                                        <navLabel>
+                                            <text>Indicações culturais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo44.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-47' playOrder='47'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo45.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-48' playOrder='48'>
+                                        <navLabel>
+                                            <text>Atividades de aprendizagem</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo46.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-49' playOrder='49'>
+                                        <navLabel>
+                                            <text>capitulo47</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo47.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-50' playOrder='50'>
+                                        <navLabel>
+                                            <text>Atividades aplicadas: prática</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo48.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-51' playOrder='51'>
+                                        <navLabel>
+                                            <text>Figura 2.2 – Natureza-morta com cesta, de Paul Cézanne</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo49.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-52' playOrder='52'>
+                                        <navLabel>
+                                            <text>Figura 2.3 – Prateleira de padaria, de Wayne Thiebaud</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo50.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-53' playOrder='53'>
+                                        <navLabel>
+                                            <text>Figura 2.4 – Os esponsais dos Arnolfini, de Jan van Eyck</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo51.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-54' playOrder='54'>
+                                        <navLabel>
+                                            <text>Figura 2.5 – Os esponsais dos Arnolfini (detalhe), de Jan van Eyck</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo52.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-55' playOrder='55'>
+                                        <navLabel>
+                                            <text>Figura 2.6 – São Mateus, artista desconhecido</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo53.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-56' playOrder='56'>
+                                        <navLabel>
+                                            <text>Figura 2.7 – O repouso durante a fuga para o Egito, de Lucas Cranach</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo54.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-57' playOrder='57'>
+                                        <navLabel>
+                                            <text>Figura 2.8 – Moinho à beira de um rio, de Jan van Goyen</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo55.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-58' playOrder='58'>
+                                        <navLabel>
+                                            <text>Figura 2.9 – Noite estrelada, de Vincent van Gogh</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo56.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-59' playOrder='59'>
+                                        <navLabel>
+                                            <text>Figura 2.10 – Bosque de Oma, de Agustín Ibarrola</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo57.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-60' playOrder='60'>
+                                        <navLabel>
+                                            <text>Figura 2.11 – Peter van den Broecke, de Frans Hals</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo58.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-61' playOrder='61'>
+                                        <navLabel>
+                                            <text>Figura 2.12 – O retrato de Clara Serena Rubens, de Peter Paul Rubens</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo59.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-62' playOrder='62'>
+                                        <navLabel>
+                                            <text>Figura 2.13 – Sigmund Freud, de Vik Muniz</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo60.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-63' playOrder='63'>
+                                        <navLabel>
+                                            <text>Figura 2.14 – Elevação de Jesus, (detalhe) de Peter Paul Rubens</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo61.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-64' playOrder='64'>
+                                        <navLabel>
+                                            <text>Figura 2.16 – Anthropometry of the Blue Period (ANT 82), de Yves Klein</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo62.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-65' playOrder='65'>
+                                        <navLabel>
+                                            <text>Figura 2.15 – Fotografia de Yves Klein e uma de suas modelos na performance Anthropometry of the Blue Epoch (Antropometria do período azul), 1960.</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo63.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-66' playOrder='66'>
+                                        <navLabel>
+                                            <text>Figura 2.18 – As meninas, de Diego Velázquez</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo64.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-67' playOrder='67'>
+                                        <navLabel>
+                                            <text>Figura 2.19 – Criança morta, de Candido Portinari</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo65.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-68' playOrder='68'>
+                                        <navLabel>
+                                            <text>Por trás dos bastidores: técnicas e materiais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo66.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-69' playOrder='69'>
+                                        <navLabel>
+                                            <text>3.1 Encáustica e afresco</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo67.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-70' playOrder='70'>
+                                        <navLabel>
+                                            <text>Suportes e materiais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo68.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-71' playOrder='71'>
+                                        <navLabel>
+                                            <text>Figura 3.4 – Cera flocada, resina de damar, cera de carnaúba, candelila e microcristalina.</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo69.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-72' playOrder='72'>
+                                        <navLabel>
+                                            <text>3.2 Pintura a óleo</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo70.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-73' playOrder='73'>
+                                        <navLabel>
+                                            <text>Suportes e materiais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo71.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-74' playOrder='74'>
+                                        <navLabel>
+                                            <text>Figura 3.8 – Pincéis: plano, chato e redondos</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo72.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-75' playOrder='75'>
+                                        <navLabel>
+                                            <text>Figura 3.9 – Representação das cores branco de titânio, vermelho de cádmio, carmim, amarelo ocre, amarelo de Nápoles, amarelo de cromo claro, verde esmeralda claro, azul de cobalto, azul da Prússia, violeta de cobalto, sombra queimada, negro-marfim</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo73.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-76' playOrder='76'>
+                                        <navLabel>
+                                            <text>Quadro 3.1 – Material básico para a prática da pintura a óleo</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo74.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-77' playOrder='77'>
+                                        <navLabel>
+                                            <text>As obras e os artistas</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo75.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-78' playOrder='78'>
+                                        <navLabel>
+                                            <text>3.3 Aquarela e guache</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo76.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-79' playOrder='79'>
+                                        <navLabel>
+                                            <text>Suportes e materiais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo77.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-80' playOrder='80'>
+                                        <navLabel>
+                                            <text>Quadro 3.2 – Material básico para aquarela</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo78.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-81' playOrder='81'>
+                                        <navLabel>
+                                            <text>3.4 Pintura acrílica</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo79.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-82' playOrder='82'>
+                                        <navLabel>
+                                            <text>Suportes e materiais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo80.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-83' playOrder='83'>
+                                        <navLabel>
+                                            <text>Quadro 3.3 – Material básico sugerido para práticas em tinta acrílica</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo81.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-84' playOrder='84'>
+                                        <navLabel>
+                                            <text>As obras e os artistas</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo82.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-85' playOrder='85'>
+                                        <navLabel>
+                                            <text>Inventando técnicas: as alternativas contemporâneas</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo83.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-86' playOrder='86'>
+                                        <navLabel>
+                                            <text>Síntese</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo84.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-87' playOrder='87'>
+                                        <navLabel>
+                                            <text>Indicações culturais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo85.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-88' playOrder='88'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo86.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-89' playOrder='89'>
+                                        <navLabel>
+                                            <text>Atividades de aprendizagem</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo87.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-90' playOrder='90'>
+                                        <navLabel>
+                                            <text>capitulo88</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo88.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-91' playOrder='91'>
+                                        <navLabel>
+                                            <text>Atividades aplicadas: prática</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo89.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-92' playOrder='92'>
+                                        <navLabel>
+                                            <text>Figura 3.1 – Retrato de múmia de Fayum</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo90.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-93' playOrder='93'>
+                                        <navLabel>
+                                            <text>Figura 3.2 – A lamentação, de Giotto di Bondone</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo91.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-94' playOrder='94'>
+                                        <navLabel>
+                                            <text>Figura 3.3 – A criação de Adão (detalhe), de Michelangelo</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo92.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-95' playOrder='95'>
+                                        <navLabel>
+                                            <text>Figura 3.5 – Rua Salcedo, 119, de Fernanda Valadares</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo93.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-96' playOrder='96'>
+                                        <navLabel>
+                                            <text>Figura 3.6 – O making of de um fresco, mostrando a construção de uma cidade, de Diego Rivera</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo94.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-97' playOrder='97'>
+                                        <navLabel>
+                                            <text>Figura 3.7 – A criação, de Diego Rivera</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo95.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-98' playOrder='98'>
+                                        <navLabel>
+                                            <text>Figura 3.10 – Retrato do Papa Inocêncio X, de Diego Velázquez</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo96.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-99' playOrder='99'>
+                                        <navLabel>
+                                            <text>Figura 3.11 – Lebre, de Albrecht Dürer</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo97.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-100' playOrder='100'>
+                                        <navLabel>
+                                            <text>Figura 3.12 – Incêndio no parlamento, de William Turner</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo98.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-101' playOrder='101'>
+                                        <navLabel>
+                                            <text>Figura 3.13 – Altar, de Adriana Varejão</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo99.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-102' playOrder='102'>
+                                        <navLabel>
+                                            <text>A cor na pintura</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo100.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-103' playOrder='103'>
+                                        <navLabel>
+                                            <text>4.1 Cor local</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo101.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-104' playOrder='104'>
+                                        <navLabel>
+                                            <text>4.2 Cor óptica</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo102.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-105' playOrder='105'>
+                                        <navLabel>
+                                            <text>Figura 4.4 – Monte de feno, de Claude Monet</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo103.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-106' playOrder='106'>
+                                        <navLabel>
+                                            <text>Figura 4.5 – Um domingo de verão na Grande Jatte, de Georges Seurat</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo104.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-107' playOrder='107'>
+                                        <navLabel>
+                                            <text>4.3 Cor como sistema interno</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo105.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-108' playOrder='108'>
+                                        <navLabel>
+                                            <text>4.4 Cor simbólica</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo106.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-109' playOrder='109'>
+                                        <navLabel>
+                                            <text>Síntese</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo107.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-110' playOrder='110'>
+                                        <navLabel>
+                                            <text>Indicações culturais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo108.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-111' playOrder='111'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo109.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-112' playOrder='112'>
+                                        <navLabel>
+                                            <text>Atividades de aprendizagem</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo110.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-113' playOrder='113'>
+                                        <navLabel>
+                                            <text>capitulo111</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo111.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-114' playOrder='114'>
+                                        <navLabel>
+                                            <text>Atividades aplicadas: prática</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo112.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-115' playOrder='115'>
+                                        <navLabel>
+                                            <text>Figura 4.1 – O triunfo de Galateia, de Rafael</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo113.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-116' playOrder='116'>
+                                        <navLabel>
+                                            <text>Figura 4.2 – Exemplo de disco cromático baseado em Wilhelm Ostwald (1853-1932)</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo114.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-117' playOrder='117'>
+                                        <navLabel>
+                                            <text>Figura 4.3 – Esquerda: Álamos ao sol, de Claude Monet. Direita: Álamos outono, de Claude Monet</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo115.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-118' playOrder='118'>
+                                        <navLabel>
+                                            <text>Figura 4.6 – Cores complementares</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo116.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-119' playOrder='119'>
+                                        <navLabel>
+                                            <text>Figura 4.7 – Composição III, de Piet Mondrian</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo117.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-120' playOrder='120'>
+                                        <navLabel>
+                                            <text>Figura 4.8 – Quatro escurecimentos em vermelho, de Mark Rothko</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo118.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-121' playOrder='121'>
+                                        <navLabel>
+                                            <text>Figura 4.9 – O café à noite, de Vincent van Gogh</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo119.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-122' playOrder='122'>
+                                        <navLabel>
+                                            <text>Figura 4.10 – O cão vermelho, de Paul Gauguin</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo120.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-123' playOrder='123'>
+                                        <navLabel>
+                                            <text>Figura 4.11 – Accord Bleu (RE 10) (Acordo azul), de Yves Klein</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo121.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-124' playOrder='124'>
+                                        <navLabel>
+                                            <text>Figura 4.12 – [Sem título], de Nuno Ramos</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo122.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-125' playOrder='125'>
+                                        <navLabel>
+                                            <text>Figura 4.13 – O semeador, de Nuno Ramos</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo123.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-126' playOrder='126'>
+                                        <navLabel>
+                                            <text>Figura 4.14 – Retrato, de Bella Volen</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo124.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-127' playOrder='127'>
+                                        <navLabel>
+                                            <text>Figuração e abstração: da representação à forma pura</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo125.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-128' playOrder='128'>
+                                        <navLabel>
+                                            <text>5.1 Figuração: o olhar sobre o visível</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo126.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-129' playOrder='129'>
+                                        <navLabel>
+                                            <text>5.2 Desconstruindo a forma por meio do concreto</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo127.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-130' playOrder='130'>
+                                        <navLabel>
+                                            <text>5.3 Forma pura abstrata</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo128.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-131' playOrder='131'>
+                                        <navLabel>
+                                            <text>Síntese</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo129.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-132' playOrder='132'>
+                                        <navLabel>
+                                            <text>Indicações culturais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo130.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-133' playOrder='133'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo131.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-134' playOrder='134'>
+                                        <navLabel>
+                                            <text>Atividades de aprendizagem</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo132.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-135' playOrder='135'>
+                                        <navLabel>
+                                            <text>capitulo133</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo133.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-136' playOrder='136'>
+                                        <navLabel>
+                                            <text>Atividades aplicadas: prática</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo134.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-137' playOrder='137'>
+                                        <navLabel>
+                                            <text>Figura 5.1 – Bonjour Monsieur Courbet, de Gustave Courbet</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo135.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-138' playOrder='138'>
+                                        <navLabel>
+                                            <text>capitulo136</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo136.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-139' playOrder='139'>
+                                        <navLabel>
+                                            <text>Figura 5.3 – A aula de dança, de Edgar Degas</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo137.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-140' playOrder='140'>
+                                        <navLabel>
+                                            <text>Figura 5.4 – Casa em L’Estaque, de Georges Braque</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo138.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-141' playOrder='141'>
+                                        <navLabel>
+                                            <text>Figura 5.5 – Homem com violão, de Georges Braque</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo139.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-142' playOrder='142'>
+                                        <navLabel>
+                                            <text>Figura 5.6 – Natureza-morta sobre toalha xadrez, de Juan Gris</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo140.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-143' playOrder='143'>
+                                        <navLabel>
+                                            <text>Figura 5.7 – Natureza-morta/Gillete, de Georges Braque</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo141.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-144' playOrder='144'>
+                                        <navLabel>
+                                            <text>Figura 5.8 – Composição VII, de Wassily Kandinsky</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo142.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-145' playOrder='145'>
+                                        <navLabel>
+                                            <text>capitulo143</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo143.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-146' playOrder='146'>
+                                        <navLabel>
+                                            <text>6.1 Pintura e linha: diálogos com o desenho</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo144.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-147' playOrder='147'>
+                                        <navLabel>
+                                            <text>6.2 Pintura e volume: diálogos com o tridimensional</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo145.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-148' playOrder='148'>
+                                        <navLabel>
+                                            <text>6.3 Pintura e fotografia: diálogos com o real</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo146.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-149' playOrder='149'>
+                                        <navLabel>
+                                            <text>6.4 Pintura e gravura: diálogos impressos</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo147.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-150' playOrder='150'>
+                                        <navLabel>
+                                            <text>6.5 Pintura e movimento: diálogos com o tempo</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo148.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-151' playOrder='151'>
+                                        <navLabel>
+                                            <text>Síntese</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo149.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-152' playOrder='152'>
+                                        <navLabel>
+                                            <text>Indicações culturais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo150.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-153' playOrder='153'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo151.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-154' playOrder='154'>
+                                        <navLabel>
+                                            <text>Atividades de aprendizagem</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo152.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-155' playOrder='155'>
+                                        <navLabel>
+                                            <text>capitulo153</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo153.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-156' playOrder='156'>
+                                        <navLabel>
+                                            <text>Atividades aplicadas: prática</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo154.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-157' playOrder='157'>
+                                        <navLabel>
+                                            <text>Figura 6.1 – Proposition Player (Jogos de proposição), de Matthew Ritchie</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo155.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-158' playOrder='158'>
+                                        <navLabel>
+                                            <text>Figura 6.9 – Séries acidentais, de Zeren Badar</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo156.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-159' playOrder='159'>
+                                        <navLabel>
+                                            <text>Figura 6.3 – Ultranatureza, de Miguel Chevalier</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo157.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-160' playOrder='160'>
+                                        <navLabel>
+                                            <text>Figura 6.4 – Blueprint Installation (Instalação pintura azul), de Alexa Meade</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo158.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-161' playOrder='161'>
+                                        <navLabel>
+                                            <text>Considerações finais</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo159.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-162' playOrder='162'>
+                                        <navLabel>
+                                            <text>Referências</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo160.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-163' playOrder='163'>
+                                        <navLabel>
+                                            <text>Bibliografia comentada</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo161.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-164' playOrder='164'>
+                                        <navLabel>
+                                            <text>Respostas</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo162.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-165' playOrder='165'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo163.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-166' playOrder='166'>
+                                        <navLabel>
+                                            <text>Questões para reflexão</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo164.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-167' playOrder='167'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo165.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-168' playOrder='168'>
+                                        <navLabel>
+                                            <text>Questões para reflexão</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo166.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-169' playOrder='169'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo167.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-170' playOrder='170'>
+                                        <navLabel>
+                                            <text>Questões para reflexão</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo168.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-171' playOrder='171'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo169.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-172' playOrder='172'>
+                                        <navLabel>
+                                            <text>Questões para reflexão</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo170.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-173' playOrder='173'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo171.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-174' playOrder='174'>
+                                        <navLabel>
+                                            <text>Questões para reflexão</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo172.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-175' playOrder='175'>
+                                        <navLabel>
+                                            <text>Atividades de autoavaliação</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo173.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-176' playOrder='176'>
+                                        <navLabel>
+                                            <text>Questões para reflexão</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo174.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-177' playOrder='177'>
+                                        <navLabel>
+                                            <text>Sobre a autora</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo175.xhtml'/>
+                                    </navPoint><navPoint id='navPoint-178' playOrder='178'>
+                                        <navLabel>
+                                            <text>Quadro cronológico das obras</text>
+                                        </navLabel>
+                                        <content src='Content/capitulo176.xhtml'/>
+                                    </navPoint>
+    </navMap>
+</ncx>

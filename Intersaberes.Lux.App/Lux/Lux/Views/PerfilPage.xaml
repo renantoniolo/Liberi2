@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:fftransformations="clr-namespace:FFImageLoading.Transformations;assembly=FFImageLoading.Transformations"
+             x:Class="Lux.Views.PerfilPage"
+             BackgroundImage="bg_livroDetalhes">
+    <ContentPage.Content>
+
+         <Grid 
+            ColumnSpacing="0"
+            RowSpacing="0">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="40" />
+                <RowDefinition Height="60" />
+                <RowDefinition Height="*" />
+                <RowDefinition Height="2*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+             <StackLayout 
+                Grid.Row="0"
+                Spacing="0"
+                BackgroundColor="{StaticResource GreyLight}"
+                Orientation="Horizontal">
+
+                <mi:IconLabel 
+                    Icon="ic_person" 
+                    FontSize="26" 
+                    Margin="0"
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="End"
+                    HorizontalOptions="EndAndExpand"
+                    TextColor="#2497A2" />
+
+                <Label
+                    Text="MINHA CONTA"
+                    Margin="5,0,0,0"
+                    Style="{StaticResource LabelDefault}" 
+                    FontSize="Medium" 
+                    VerticalTextAlignment="Center"
+                    VerticalOptions="Center"
+                    HorizontalTextAlignment="Start"
+                    HorizontalOptions="StartAndExpand" />
+
+            </StackLayout>
+
+            <Button 
+                Grid.Row="1"
+                Margin="0,0,10,0"
+                HorizontalOptions="EndAndExpand"
+                VerticalOptions="Center"
+                WidthRequest="90"
+                Text="Salvar"
+                FontAttributes="Bold"
+                Style="{StaticResource ButtonStyle}" 
+                Command="{Binding SaveCommand}" />
+               
+            <StackLayout 
+                Grid.Row="2">
+                    
+                    <mi:IconLabel 
+                        IsVisible="{Binding BoolIconLabel}"
+                        FontSize="120"
+                        Icon="ic_account_circle" 
+                        VerticalTextAlignment="Start"
+                        VerticalOptions="Start"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        TextColor="#CCC" >
+                        <mi:IconLabel.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CameraCommand}" />
+                        </mi:IconLabel.GestureRecognizers>
+                    </mi:IconLabel>
+
+                    <ffimageloading:CachedImage 
+                        HorizontalOptions="Center"
+                        VerticalOptions="Center"
+                        IsVisible="{Binding BoolImageSource}"
+                        Source="{Binding ImageSource}" 
+                        DownsampleToViewSize="true"
+                        CacheType="Memory"
+                        HeightRequest="120"
+                        WidthRequest="120"
+                        FadeAnimationEnabled="true"
+                        LoadingPlaceholder="avatar"
+                        ErrorPlaceholder="avatar">
+                        <ffimageloading:CachedImage.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CameraCommand}" />
+                        </ffimageloading:CachedImage.GestureRecognizers>
+                        <ffimageloading:CachedImage.Transformations>
+                            <fftransformations:CircleTransformation/>
+                        </ffimageloading:CachedImage.Transformations>
+                    </ffimageloading:CachedImage>
+                
+                    <Label
+                        Style="{StaticResource LabelPopup}"
+                        Text="Editar foto"
+                        HorizontalOptions="Center"
+                        HorizontalTextAlignment="Center"
+                        VerticalOptions="Start" 
+                        VerticalTextAlignment="Start" >
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CameraCommand}" />
+                        </Label.GestureRecognizers>
+                    </Label>
+                    
+                </StackLayout>
+
+            <ScrollView Grid.Row="3">
+            
+                <StackLayout 
+                    Margin="0,20,0,0"
+                    Padding="25,0,25,25">
+
+                    <Entry 
+                        Placeholder="Nome" 
+                        PlaceholderColor="Gray" 
+                        BackgroundColor="White"
+                        TextColor="Gray"
+                        Text="{Binding InputNome, Mode=TwoWay}" />
+
+                    <Entry 
+                        Placeholder="E-mail" 
+                        PlaceholderColor="Gray" 
+                        BackgroundColor="White"
+                        Keyboard="Email"
+                        TextColor="Gray"
+                        Text="{Binding InputEmail, Mode=TwoWay}" />
+
+                    <Entry 
+                        Placeholder="Cidade" 
+                        PlaceholderColor="Gray" 
+                        BackgroundColor="White"
+                        Keyboard="Default"
+                        TextColor="Gray"
+                        Text="{Binding InputCidade, Mode=TwoWay}" />
+
+                    <Button 
+                        Margin="0"
+                        HorizontalOptions="FillAndExpand"
+                        VerticalOptions="Start"
+                        WidthRequest="90"
+                        Text="Trocar Senha"
+                        BackgroundColor="#FFF"
+                        TextColor="Gray"
+                        Command="{Binding SenhaCommand}" />
+
+                     <Label
+                        Margin="0,20,0,10"
+                        Style="{StaticResource LabelPopup}"
+                        Text="As informações aqui inseridas são de responsabilidade do usuário. Ao criar uma conta o usuário concorda com os termos de contrato, atestando inclusive a veracidade dessas informações apresentadas."
+                        FontSize="Micro"
+                        TextColor="{StaticResource GreyLiberi}"
+                        HorizontalOptions="StartAndExpand"
+                        HorizontalTextAlignment="Start"/>
+                    
+                </StackLayout>
+                
+        </ScrollView>
+            
+        </Grid>
+        
+    </ContentPage.Content>
+</ContentPage>

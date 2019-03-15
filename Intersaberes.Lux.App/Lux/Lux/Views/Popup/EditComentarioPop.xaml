@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Lux.Helpers"
+             xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin.Abstractions"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"   
+             xmlns:abstractions="clr-namespace:RoundedBoxView.Forms.Plugin.Abstractions;assembly=RoundedBoxView.Forms.Plugin.Abstractions" 
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             xmlns:rating="clr-namespace:Syncfusion.SfRating.XForms;assembly=Syncfusion.SfRating.XForms"
+             x:Class="Lux.Views.Popup.EditComentarioPop">
+
+    <pages:PopupPage.Resources>
+        <ResourceDictionary>
+            <local:DoubleToRattings x:Key="doubleTorattings"/>
+        </ResourceDictionary>
+    </pages:PopupPage.Resources>
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <pages:PopupPage.Content>
+        <StackLayout 
+            Margin="30"
+            Padding="5"
+            BackgroundColor="Transparent">
+
+            <Frame Margin="10" OutlineColor="Black" HasShadow="True" 
+                   BackgroundColor="White" VerticalOptions="StartAndExpand">
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+
+                        <Label Text="Avaliar"
+                               FontSize="Large"
+                               FontFamily="Bold"
+                               HorizontalOptions="Start"
+                               VerticalOptions="CenterAndExpand"
+                               YAlign="Center"/>
+
+                        <rating:SfRating x:Name="rating" ItemCount="5" HorizontalOptions="End" 
+                                     VerticalOptions="CenterAndExpand" Precision="Exact" ValueChanged="OnRatingValue"
+                                     TooltipPlacement="TopLeft" ItemSize="26" Value="{Binding Aval}">
+                            <rating:SfRating.RatingSettings>
+                                <rating:SfRatingSettings RatedFill="Red" />
+                            </rating:SfRating.RatingSettings>
+                        </rating:SfRating>
+
+                    </StackLayout>
+
+                    <Label 
+                            Text="Comentário:"
+                            TextColor="{StaticResource GreyLiberi}"
+                            Style="{StaticResource LabelDefault}" />
+
+                    <Editor HeightRequest="100"
+                            VerticalOptions="StartAndExpand" 
+                            BackgroundColor="White"
+                            TextColor="Gray" 
+                            Text="{Binding Comentario._Comentario}"/>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Button 
+                            HorizontalOptions="Start"
+                            VerticalOptions="End"
+                            Text="Fechar"
+                            FontAttributes="Bold"
+                            Style="{StaticResource ButtonStyle}" 
+                            Clicked="ClosePopup" />
+
+                        <Button 
+                            HorizontalOptions="EndAndExpand"
+                            VerticalOptions="End"
+                            Text="Publicar"
+                            FontAttributes="Bold"
+                            Style="{StaticResource ButtonStyle}" 
+                            Command="{Binding SalveCommand}" />
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+
+        </StackLayout>
+    </pages:PopupPage.Content>
+
+</pages:PopupPage>

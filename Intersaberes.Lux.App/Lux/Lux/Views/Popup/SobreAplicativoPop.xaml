@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"   
+             xmlns:mi="clr-namespace:MaterialIcons.FormsPlugin.Abstractions;assembly=MaterialIcons.FormsPlugin.Abstractions"
+             x:Class="Lux.Views.Popup.SobreAplicativoPop">
+
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+        </pages:PopupPage.Animation>
+       
+
+        <StackLayout 
+            BackgroundColor="{StaticResource GreenLiberi}"
+            Margin="40,70,40,150">
+
+            <Grid 
+                ColumnSpacing="0"
+                RowSpacing="0">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="45" />
+                    <RowDefinition Height="*" />
+                    <RowDefinition Height="50" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Image 
+                    Grid.Row="0"
+                    Source="logo_liberi_sobre" 
+                    Aspect="AspectFit"
+                    VerticalOptions="Center" 
+                    HorizontalOptions="Center" />
+           
+
+                <ScrollView 
+                    Grid.Row="1"
+                    BackgroundColor="{StaticResource BackgroundColorViewPage}">
+
+                    <Label
+                        Style="{StaticResource LabelPopup}"
+                        FontSize="Micro"
+                        HorizontalOptions="Fill"
+                        Margin="15" 
+                        Text="Especializada em conteúdos universitários, a Editora InterSaberes possui um catálogo com mais de 800 obras nas áreas de educação, negócios, ciências sociais, letras e capacitação profissional.
+A InterSaberes oferece conteúdo de qualidade, autores de renome, uma grande variedade de temas e títulos, linha gráfica moderna e atraente em diferentes formatos, mídias e suportes.
+Uma editora completa para instituições de ensino, professores, estudantes e profissionais de diversas áreas do conhecimento.
+A linguagem dialógica, a diagramação diferenciada e os recursos de ensino dos nossos livros facilitam o aprendizado e estabelecem um diálogo direto com o leitor, nossas obras também contam com indicações culturais, atividades de autoavaliação, questões para reflexão, atividades práticas e bibliografia comentada.
+Editora InterSaberes o conhecimento de quem já nasceu na educação a distância" />                
+                </ScrollView>
+
+                <Grid 
+                    Grid.Row="2"
+                    BackgroundColor="{StaticResource BackgroundColorViewPage}">
+                
+                    <Button 
+                        HorizontalOptions="Center"
+                        VerticalOptions="End"
+                        Text="Fechar"
+                        FontAttributes="Bold"
+                        WidthRequest="90"
+                        Margin="0,0,0,10"
+                        Style="{StaticResource ButtonStyle}" 
+                        Clicked="ClosePopup" />    
+                
+                </Grid>
+
+            </Grid>
+        
+            <Label
+                Style="{StaticResource LabelDefault}"
+                Text="Versão 1.0.12"
+                TextColor="#FFF"
+                FontSize="Small"
+                HorizontalTextAlignment="Center" />
+
+        </StackLayout>
+    
+    </pages:PopupPage>
